@@ -1,4 +1,6 @@
-const vegetables = [
+import sorting from "../utils/sorting"
+
+let vegetables = [
     {
         name: "Artichaut",
         type: "vegetable",
@@ -222,5 +224,7 @@ const vegetables = [
         color: "#dad6bc",
     },
 ]
+
+vegetables = sorting.sortByName(vegetables)
 
 export default vegetables

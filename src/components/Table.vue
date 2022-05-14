@@ -1,7 +1,6 @@
 <script setup>
 import months from "../data/months"
 import formatting from "../utils/formatting"
-import sorting from "../utils/sorting"
 </script>
 
 <template>
@@ -54,7 +53,7 @@ export default {
     },
     computed: {
         currentMonthEdibles() {
-            return sorting.sortByName(this.edibles.filter((e) => e.months.includes(this.currentMonth)))
+            return this.edibles.filter((e) => e.months.includes(this.currentMonth))
         },
     },
     methods: {
