@@ -6,7 +6,7 @@ import sorting from "../utils/sorting"
 
 <template>
     <table class="table">
-        <template v-if="mq.current === 'sm'">
+        <template v-if="mq.current === 'xs'">
             <ul>
                 <li v-for="edible, index in currentMonthEdibles" :key="edible.name" :class="[ 'table__body__row', 'table__body__row--current', { 'table__body__row--bordered': index === currentMonthEdibles.length - 1 }]">
                     <div class="table__body__cell--head table__cell--highlight">{{edible.name}}</div>
@@ -73,12 +73,13 @@ export default {
                 11: "novembre",
                 12: "décembre",
             }
-            return formatting.shortenMonthName(mapper[month])
+            return formatting.shortenMonthName(mapper[month], this.mq.current)
         },
         getEdiblePeriod(edible) {
+            const start = [4, 8, 10].includes(edible.months[0]) ? "D'": "De "
             const from = this.getMonthName(edible.months[0])
             const to = this.getMonthName(edible.months[edible.months.length - 1])
-            return `De ${from} à ${to}`
+            return `${start}${from} à ${to}`
         }
     },
 }
@@ -87,7 +88,10 @@ export default {
 <style lang="scss">
 .table {
     table-layout: fixed;
-    text-transform: capitalize;
+
+    &__head {
+        text-transform: capitalize;
+    }
 
     &__body {
         &__row {
@@ -95,8 +99,12 @@ export default {
                 border-bottom: solid 1px var(--primary);
             }
         }
+
         &__cell {
             &--head {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 text-align: left;
             }
         }

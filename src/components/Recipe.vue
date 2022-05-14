@@ -68,7 +68,7 @@ export default {
     }
 }
 
-@media (max-width: $sm) {
+@media (max-width: $xs) {
     .recipe {
         &__category {
             display: block;
@@ -79,7 +79,11 @@ export default {
             }
         }
 
-        &__preparation, &__steps {
+        &__ingredients {
+            display: block;
+        }
+
+        &__ingredients, &__preparation, &__steps {
             text-align: left;
         }
     }
