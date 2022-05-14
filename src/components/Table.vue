@@ -6,25 +6,40 @@ import sorting from "../utils/sorting"
 
 <template>
     <table class="table">
-        <thead class="table__head">
-            <td :colspan="edibleColSpan" class="table__head__cell"></td>
-            <th scope="col" v-for="month in months" :key="getMonthName(month)" :class="{ 'table__head__cell': true, 'table__cell--highlight': month === currentMonth }">{{getMonthName(month)}}</th>
-        </thead>
-        <tbody class="table__body">
-            <tr v-for="edible, index in currentMonthEdibles" :key="edible.name" :class="[ 'table__body__row', 'table__body__row--current', { 'table__body__row--bordered': index === currentMonthEdibles.length - 1 }]">
-                <th :colspan="edibleColSpan" scope="row" class="table__body__cell--head table__cell--highlight">{{edible.name}}</th>
-                <td v-for="month in months" :key="`${edible.name}_${getMonthName(month)}`" :style="{ 'background': edible.months.includes(month) && edible.color }"></td>
-            </tr>
-            <tr v-for="edible in edibles.filter((f) => !f.months.includes(currentMonth))" :key="edible.name">
-                <th :colspan="edibleColSpan" scope="row" class="table__body__cell--head">{{edible.name}}</th>
-                <td v-for="month in months" :key="`${edible.name}_${getMonthName(month)}`" :style="{ 'background': edible.months.includes(month) && edible.color }"></td>
-            </tr>
-        </tbody>
+        <template v-if="mq.current === 'sm'">
+            <ul>
+                <li v-for="edible, index in currentMonthEdibles" :key="edible.name" :class="[ 'table__body__row', 'table__body__row--current', { 'table__body__row--bordered': index === currentMonthEdibles.length - 1 }]">
+                    <div class="table__body__cell--head table__cell--highlight">{{edible.name}}</div>
+                    <div>{{getEdiblePeriod(edible)}}</div>
+                </li>
+                <li v-for="edible in edibles.filter((f) => !f.months.includes(currentMonth))" :key="edible.name">
+                    <div class="table__body__cell--head">{{edible.name}}</div>
+                    <div>{{getEdiblePeriod(edible)}}</div>
+                </li>
+            </ul>
+        </template>
+        <template v-else>
+            <thead class="table__head">
+                <td :colspan="edibleColSpan" class="table__head__cell"></td>
+                <th scope="col" v-for="month in months" :key="getMonthName(month)" :class="{ 'table__head__cell': true, 'table__cell--highlight': month === currentMonth }">{{getMonthName(month)}}</th>
+            </thead>
+            <tbody class="table__body">
+                <tr v-for="edible, index in currentMonthEdibles" :key="edible.name" :class="[ 'table__body__row', 'table__body__row--current', { 'table__body__row--bordered': index === currentMonthEdibles.length - 1 }]">
+                    <th :colspan="edibleColSpan" scope="row" class="table__body__cell--head table__cell--highlight">{{edible.name}}</th>
+                    <td v-for="month in months" :key="`${edible.name}_${getMonthName(month)}`" :style="{ 'background': edible.months.includes(month) && edible.color }"></td>
+                </tr>
+                <tr v-for="edible in edibles.filter((f) => !f.months.includes(currentMonth))" :key="edible.name">
+                    <th :colspan="edibleColSpan" scope="row" class="table__body__cell--head">{{edible.name}}</th>
+                    <td v-for="month in months" :key="`${edible.name}_${getMonthName(month)}`" :style="{ 'background': edible.months.includes(month) && edible.color }"></td>
+                </tr>
+            </tbody>
+        </template>
     </table>
 </template>
 
 <script>
 export default {
+    inject: ["mq"],
     props: {
         edibles: {
             type: Array,
@@ -60,6 +75,11 @@ export default {
             }
             return formatting.shortenMonthName(mapper[month])
         },
+        getEdiblePeriod(edible) {
+            const from = this.getMonthName(edible.months[0])
+            const to = this.getMonthName(edible.months[edible.months.length - 1])
+            return `De ${from} à ${to}`
+        }
     },
 }
 </script>

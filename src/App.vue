@@ -13,7 +13,9 @@ import Table from "./components/Table.vue"
         <section class="app__section">
             <Accordion title="Tableau des saisons">
                 <div class="app__tables">
+                    <h4 v-if="mq.current !== 'lg'" class="app__tables__title title--4">Fruits</h4>
                     <Table :edibles="fruits" />
+                    <h4 v-if="mq.current !== 'lg'" class="app__tables__title title--4">Légumes</h4>
                     <Table :edibles="vegetables" />
                 </div>
             </Accordion>
@@ -33,6 +35,7 @@ import Table from "./components/Table.vue"
 
 <script>
 export default {
+    inject: ["mq"],
     components: {
         Accordion,
         Recipe,
@@ -44,6 +47,7 @@ export default {
 
 <style lang="scss">
 @import './assets/styles/basics/reset.scss';
+@import './assets/styles/basics/breakpoints.scss';
 @import './assets/styles/basics/colors.scss';
 @import './assets/styles/modules/title.scss';
 
@@ -79,10 +83,16 @@ body {
     }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: $md) {
     .app {
         &__tables {
             display: block;
+
+            &__title {
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }
+            }
 
             .table {
                 margin: 0;
@@ -91,7 +101,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $sm) {
     .app {
         padding: 1rem;
 

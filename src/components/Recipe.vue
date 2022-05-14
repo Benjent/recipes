@@ -16,15 +16,15 @@ import Ingredient from "./Ingredient.vue"
                 </li>
             </ul>
         </div>
-        <div class="recipe__category">
+        <div v-if="recipe.preparation.length > 0" class="recipe__category">
             <div class="recipe__category__icon">🔪</div>
-            <ol>
+            <ol  class="recipe__preparation">
                 <li v-for="preparation in recipe.preparation" :key="preparation">{{preparation}}</li>
             </ol>
         </div>
-        <div class="recipe__category">
+        <div v-if="recipe.steps.length > 0" class="recipe__category">
             <div class="recipe__category__icon">🍲</div>
-            <ol>
+            <ol  class="recipe__steps">
                 <li v-for="step in recipe.steps" :key="step">{{step}}</li>
             </ol>
         </div>
@@ -46,6 +46,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/styles/basics/breakpoints.scss';
+
 .recipe {
     &__category {
         display: flex;
@@ -63,6 +65,23 @@ export default {
         display: flex;
         flex-wrap: wrap;
         gap: 0px 40px;
+    }
+}
+
+@media (max-width: $sm) {
+    .recipe {
+        &__category {
+            display: block;
+            text-align: center;
+
+            &__icon {
+                margin-right: 0;
+            }
+        }
+
+        &__preparation, &__steps {
+            text-align: left;
+        }
     }
 }
 </style>

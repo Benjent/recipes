@@ -1,6 +1,6 @@
 <template>
     <div class="accordion">
-        <h3 :class="['accordion__title', { 'accordion__title--open': isOpen }]" @click="isOpen = !isOpen">{{title}}</h3>
+        <h3 :class="['title--3', 'accordion__title', { 'accordion__title--open': isOpen }]" @click="isOpen = !isOpen">{{title}}</h3>
         <div v-if="isOpen" class="accordion__body">
             <slot></slot>
         </div>
