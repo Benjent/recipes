@@ -78,4 +78,26 @@ body {
         margin-bottom: 60px;
     }
 }
+
+@media (max-width: 1080px) {
+    .app {
+        &__tables {
+            display: block;
+
+            .table {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 1rem;
+
+        &__section {
+            padding: 0;
+        }
+    }
+}
 </style>

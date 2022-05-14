@@ -61,14 +61,8 @@ export default {
 
     &__ingredients {
         display: flex;
-
-        &__item {
-            display: inline list-item;
-
-            &:not(:first-child) {
-                margin-left: 26px;
-            }
-        }
+        flex-wrap: wrap;
+        gap: 0px 40px;
     }
 }
 </style>

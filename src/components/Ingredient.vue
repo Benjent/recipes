@@ -18,6 +18,6 @@ export default {
 
 <style lang="scss">
 .ingredient {
-    display: flex;
+    display: ruby;
 }
 </style>
