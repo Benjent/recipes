@@ -1,9 +1,14 @@
 const recipes = [
-    // TODO Dahl lentilles
-    // Burger végé
-    // galettes
-    // hachi végé kefta pdt
-    // cake patates emmental
+    // TODO
+    // Dahl de lentilles
+    // Galette oeuf fromage
+    // Galette de fondue de poireau
+    // Omelette
+    // Omelette au champignon
+    // Rouleau betterave (+ mâche + comté)
+    // Risotto coquillettes fromage
+    // Hachis parmentier de kefta (pomme de terre, carotte)
+    // Cake à la pomme de terre (+ emmental)
     {
         name: "Chips de navet",
         ingredients: [
@@ -14,7 +19,8 @@ const recipes = [
             },
         ],
         rapidity: "Rapide",
-        steps: ["Préparer le navet", "Trancher le navet en lamelles"]
+        preparation: ["Préparer le navet", "Trancher le navet en lamelles"],
+        steps: [],
     },
     {
         name: "Tartine de pesto",
@@ -31,7 +37,8 @@ const recipes = [
             },
         ],
         rapidity: "Rapide",
-        steps: ["Trancher le pain", "Griller les tranches au grille-pain", "Tartiner les tranches avec le pesto"]
+        preparation: ["Trancher le pain"],
+        steps: ["Griller les tranches au grille-pain", "Tartiner les tranches avec le pesto"],
     },
     {
         name: "Salade à la vinaigrette moutardée",
@@ -53,7 +60,61 @@ const recipes = [
             },
         ],
         rapidity: "Rapide",
-        steps: ["Laver la salade", "Préparer l'échalotte et la trancher", "Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalotte"]
+        preparation: ["Laver la salade", "Préparer l'échalotte et la trancher"],
+        steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalotte"],
+    },
+    {
+        name: "Burger",
+        ingredients: [
+            {
+                name: "Pain burger",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Oignon rouge",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Tomate",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Salade",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Champignon",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Tomme",
+                amount: 25,
+                unit: "g",
+            },
+            {
+                name: "Oeuf",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Moutarde",
+                amount: 5,
+                unit: "g",
+            },
+            {
+                name: "Ketchup",
+                amount: 5,
+                unit: "g",
+            },
+        ],
+        rapidity: "Rapide",
+        preparation: ["Laver la salade", "Préparer l'oignon, les champignons et les trancher", "Trancher la tomme, la tomate et arracher une feuille de salade"],
+        steps: ["Faire revenir les champignons à la poêle", "Cuire l'oeuf à la poêle et y ajouter du poivre", "Griller les pains au grille-pain", "Assembler moutarde, champignon, salade, fromage, tomate, oignon, oeuf et ketchup dans les pains"],
     },
     {
         name: "Fajita",
@@ -85,7 +146,8 @@ const recipes = [
             },
         ],
         rapidity: "Moyen",
-        steps: ["Préparer l'oignon, les champignons et les carottes et les trancher", "Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Émietter les falafels et les ajouter à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes"]
+        preparation: ["Préparer l'oignon, les champignons et les carottes et les trancher", "Émietter les falafels"],
+        steps: ["Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Ajouter les falafels à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes"],
     },
     {
         name: "Gnocchi à la crème",
@@ -107,7 +169,117 @@ const recipes = [
             },
         ],
         rapidity: "Moyen",
-        steps: ["Préparer les champignons et les trancher", "Faire revenir les gnocchis dans du beurre à la poêle", "Retirer les gnocchis et faire revenir la crème et les champignons à la poêle"]
+        preparation: ["Préparer les champignons et les trancher"],
+        steps: ["Faire revenir les gnocchis dans du beurre à la poêle", "Retirer les gnocchis et faire revenir la crème et les champignons à la poêle"],
+    },
+    {
+        name: "Champignons farcis",
+        ingredients: [
+            {
+                name: "Champignon",
+                amount: 10,
+                unit: "p",
+            },
+            {
+                name: "Crème",
+                amount: 25,
+                unit: "g",
+            },
+        ],
+        rapidity: "Moyen",
+        preparation: ["Préparer les champignons et retirer leur pied"],
+        steps: ["Farcir les champignons de crème et ajouter des épices", "Cuir les champignons au four"]
+    },
+    {
+        name: "Salade césar",
+        ingredients: [
+            {
+                name: "Salade",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Tomate cerise",
+                amount: 10,
+                unit: "p",
+            },
+            {
+                name: "Avocat",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Ail",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Tofu",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Mayonnaise",
+                amount: 25,
+                unit: "g",
+            },
+            {
+                name: "Oeuf",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Citron",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: "Moyen",
+        preparation: ["Laver la salade", "Couper les tomates cerises en deux", "Préparer l'ail et l'écraser"],
+        steps: ["Faire revenir le tofu à la poêle", "Remuer l'oeuf avec la mayonnaise, l'huile, le jus de citron et du poivre", "Remuer la salade avec les tomates, l'ail, le tofu et le mélange"],
+    },
+    {
+        name: "Dahl de lentilles de corail",
+        ingredients: [
+            {
+                name: "Lentilles de corail",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Pulpe de tomate",
+                amount: 400,
+                unit: "ml",
+            },
+            {
+                name: "Lait de coco",
+                amount: 400,
+                unit: "ml",
+            },
+            {
+                name: "Oignon",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Ail",
+                amount: 2,
+                unit: "p",
+            },
+            {
+                name: "Huile de coco",
+                amount: 5,
+                unit: "cl",
+            },
+            {
+                name: "Gingembre",
+                amount: 10,
+                unit: "g",
+            },
+        ],
+        rapidity: "Long",
+        preparation: ["Préparer l'oignon, l'ail, le gingembre et les trancher"],
+        steps: ["Faire cuire l'oignon dans l'huile de coco", "Ajouter l'ail et le gingembre, épicer et mélanger", "Ajouter les lentilles de corail et mélanger", "Ajouter la pulpe de tomate avec de l'eau et mélanger", "Ajouter le lait de coco et mélanger", "Ajouter de la coriandre"],
     },
     {
         name: "Risotto",
@@ -149,7 +321,8 @@ const recipes = [
             },
         ],
         rapidity: "Long",
-        steps: ["Préparer les champignons, l'oignon, l'ail et les trancher", "Faire bouillir le bouillon à la casserole", "Faire revenir l'ail et l'oignon à la poêle", "Ajouter les champignons à la poêle", "Ajouter le riz avec le vin blanc", "Ajouter régulièrement le bouillon jusqu'à épuisement", "Ajouter le parmesan"]
+        preparation: ["Préparer les champignons, l'oignon, l'ail et les trancher"],
+        steps: ["Faire revenir l'ail et l'oignon à la poêle", "Ajouter les champignons à la poêle", "Ajouter le riz avec le vin blanc", "Ajouter régulièrement le bouillon jusqu'à épuisement", "Ajouter le parmesan"],
     },
 ]
 
