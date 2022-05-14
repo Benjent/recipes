@@ -15,7 +15,7 @@ npm run build
 # git init
 # git checkout -b main
 git add dist -f
-git commit -m 'deploy dist'
+git commit -m 'Add dist'
 git subtree push --prefix dist origin gh-pages
 
 # if you are deploying to https://<USERNAME>.github.io
