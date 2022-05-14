@@ -17,6 +17,12 @@ import Ingredient from "./Ingredient.vue"
             </ul>
         </div>
         <div class="recipe__category">
+            <div class="recipe__category__icon">🔪</div>
+            <ol>
+                <li v-for="preparation in recipe.preparation" :key="preparation">{{preparation}}</li>
+            </ol>
+        </div>
+        <div class="recipe__category">
             <div class="recipe__category__icon">🍲</div>
             <ol>
                 <li v-for="step in recipe.steps" :key="step">{{step}}</li>
@@ -45,7 +51,7 @@ export default {
         display: flex;
 
         &:not(:first-child) {
-            margin-top: 14px;
+            margin-top: 20px;
         }
 
         &__icon {

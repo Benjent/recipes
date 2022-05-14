@@ -32,7 +32,7 @@ export default {
         cursor: pointer;
         user-select: none;
         background: var(--background);
-        padding: 10px 16px;
+        padding: 16px 22px;
 
         &:hover {
             background: var(--cta);
@@ -45,7 +45,7 @@ export default {
 
     &__body {
         background: var(--background-light);
-        padding: 10px 16px;
+        padding: 16px 22px;
     }
 }
 </style>

@@ -10,9 +10,13 @@ import Table from "./components/Table.vue"
 <template>
     <main class="app">
         <h2 class="title--2">Fruits et légumes</h2>
-        <section class="app__tables app__section">
-            <Table :edibles="fruits" />
-            <Table :edibles="vegetables" />
+        <section class="app__section">
+            <Accordion title="Tableau des saisons">
+                <div class="app__tables">
+                    <Table :edibles="fruits" />
+                    <Table :edibles="vegetables" />
+                </div>
+            </Accordion>
         </section>
         <h2 class="title--2">Recettes</h2>
         <section class="app__section">
@@ -71,7 +75,7 @@ body {
 
     &__section {
         padding: 0 2rem;
-        margin-bottom: 100px;
+        margin-bottom: 60px;
     }
 }
 </style>
