@@ -1,6 +1,6 @@
 # recipes
 
-This template should help get you started developing with Vue 3 in Vite.
+Tiny project listing recipes I like.
 
 ## Recommended IDE Setup
 
@@ -26,4 +26,10 @@ npm run dev
 
 ```sh
 npm run build
+```
+
+### Deploy
+
+```sh
+./deploy.sh
 ```
