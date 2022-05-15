@@ -1,14 +1,16 @@
 const recipes = [
-    // TODO
+    // TODO catégoriser recettes (cake, gratin, dahl, galette, jus, omemette, ...)
+    // TODO ajouter recettes below
     // Dahl de lentilles
     // Galette oeuf fromage
     // Galette de fondue de poireau
     // Omelette
     // Omelette au champignon
-    // Rouleau betterave (+ mâche + comté)
     // Risotto coquillettes fromage
     // Hachis parmentier de kefta (pomme de terre, carotte)
     // Cake à la pomme de terre (+ emmental)
+    // Jus carotte citron gingembre
+    // Jus brocoli radis tomate
     {
         name: "Chips de navet",
         ingredients: [
@@ -62,6 +64,39 @@ const recipes = [
         rapidity: "Rapide",
         preparation: ["Laver la salade", "Préparer l'échalotte et la trancher"],
         steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalotte"],
+    },
+    {
+        name: "Rouleau de betterave",
+        ingredients: [
+            {
+                name: "Mâche",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Betterave",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Comté",
+                amount: 25,
+                unit: "g",
+            },
+            {
+                name: "Noix",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Galette de riz",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: "Rapide",
+        preparation: ["Laver la salade", "Préparer la betterave et la trancher", "Trancher le comté", "Émietter la noix"],
+        steps: ["Mouiller la galette", "Disposer sur le diamètre de la galette les tranches de betterave et de comté", "Ajouter une feuille de salade, un filer d'huile et les miettes de noix", "Rouler la galette"],
     },
     {
         name: "Burger",
@@ -144,10 +179,15 @@ const recipes = [
                 amount: 500,
                 unit: "g",
             },
+            {
+                name: "Galette de blé",
+                amount: 1,
+                unit: "p",
+            },
         ],
         rapidity: "Moyen",
         preparation: ["Préparer l'oignon, les champignons et les carottes et les trancher", "Émietter les falafels"],
-        steps: ["Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Ajouter les falafels à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes"],
+        steps: ["Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Ajouter les falafels à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes", "Disposer le mélange dans la galette et la rouler"],
     },
     {
         name: "Gnocchi à la crème",
