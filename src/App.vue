@@ -1,5 +1,6 @@
 <script setup>
 import fruits from "./data/fruits"
+import juices from "./data/juices"
 import recipes from "./data/recipes"
 import vegetables from "./data/vegetables"
 import Accordion from "./components/Accordion.vue"
@@ -9,6 +10,8 @@ import Table from "./components/Table.vue"
 
 <template>
     <main class="app">
+        <h1 class="title--1">Recettes</h1>
+
         <h2 class="title--2">Fruits et légumes</h2>
         <section class="app__section">
             <Accordion title="Tableau des saisons">
@@ -20,13 +23,23 @@ import Table from "./components/Table.vue"
                 </div>
             </Accordion>
         </section>
-        <h2 class="title--2">Recettes</h2>
+
+        <h2 class="title--2">Plats</h2>
         <section class="app__section">
             <ul>
                 <li v-for="recipe in recipes" :key="recipe.name">
                     <Accordion :title="recipe.name">
                         <Recipe :recipe="recipe" />
                     </Accordion>
+                </li>
+            </ul>
+        </section>
+
+        <h2 class="title--2">Jus</h2>
+        <section class="app__section">
+            <ul>
+                <li v-for="juice in juices" :key="juice.ingredients.join('_')">
+                    <h3 class="title--3">{{juice.ingredients.join(', ')}}</h3>
                 </li>
             </ul>
         </section>

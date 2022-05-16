@@ -3,14 +3,11 @@ const recipes = [
     // TODO ajouter recettes below
     // Dahl de lentilles
     // Galette oeuf fromage
-    // Galette de fondue de poireau
     // Omelette
     // Omelette au champignon
     // Risotto coquillettes fromage
     // Hachis parmentier de kefta (pomme de terre, carotte)
     // Cake à la pomme de terre (+ emmental)
-    // Jus carotte citron gingembre
-    // Jus brocoli radis tomate
     {
         name: "Chips de navet",
         ingredients: [
@@ -97,6 +94,34 @@ const recipes = [
         rapidity: "Rapide",
         preparation: ["Laver la salade", "Préparer la betterave et la trancher", "Trancher le comté", "Émietter la noix"],
         steps: ["Mouiller la galette", "Disposer sur le diamètre de la galette les tranches de betterave et de comté", "Ajouter une feuille de salade, un filer d'huile et les miettes de noix", "Rouler la galette"],
+    },
+    {
+        name: "Salade de thon",
+        ingredients: [
+            {
+                name: "Laitue",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Thon",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Roquefort",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Maïs",
+                amount: 50,
+                unit: "g",
+            },
+        ],
+        rapidity: "Rapide",
+        preparation: ["Laver la salade", "Trancher le thon et le roquefort"],
+        steps: ["Mélanger le thon, le roquefort et le maïs avec la salade"],
     },
     {
         name: "Burger",
@@ -190,6 +215,44 @@ const recipes = [
         steps: ["Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Ajouter les falafels à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes", "Disposer le mélange dans la galette et la rouler"],
     },
     {
+        name: "Galette de fondue de poireaux",
+        ingredients: [
+            {
+                name: "Galette de sarrasin",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Champignon",
+                amount: 6,
+                unit: "p",
+            },
+            {
+                name: "Oignon",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Échalote",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Crème",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Poireau",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: "Moyen",
+        preparation: ["Préparer l'oignon, l'échalote, les champignons et le poireau et les trancher"],
+        steps: ["Faire revenir l'oignon et les champignons à la poêle", "Ajouter l'échalotte et le poireau à la poêle", "Ajouter la crème et mélanger", "Faire griller la galette et y ajoutant la fondue de poireaux"],
+    },
+    {
         name: "Gnocchi à la crème",
         ingredients: [
             {
@@ -279,6 +342,29 @@ const recipes = [
         steps: ["Faire revenir le tofu à la poêle", "Remuer l'oeuf avec la mayonnaise, l'huile, le jus de citron et du poivre", "Remuer la salade avec les tomates, l'ail, le tofu et le mélange"],
     },
     {
+        name: "Omelette à la pomme de terre",
+        ingredients: [
+            {
+                name: "Oeuf",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Pomme de terre",
+                amount: 6,
+                unit: "p",
+            },
+            {
+                name: "Ciboulette",
+                amount: 5,
+                unit: "g",
+            },
+        ],
+        rapidity: "Moyen",
+        preparation: ["Préparer les pommes de terre et les trancher"],
+        steps: ["Faire revenir les pommes de terre à la poêle et les épicer", "Remuer les oeufs avec la ciboulette", "TODO"],
+    },
+    {
         name: "Dahl de lentilles de corail",
         ingredients: [
             {
@@ -363,6 +449,39 @@ const recipes = [
         rapidity: "Long",
         preparation: ["Préparer les champignons, l'oignon, l'ail et les trancher"],
         steps: ["Faire revenir l'ail et l'oignon à la poêle", "Ajouter les champignons à la poêle", "Ajouter le riz avec le vin blanc", "Ajouter régulièrement le bouillon jusqu'à épuisement", "Ajouter le parmesan"],
+    },
+    {
+        name: "Tagliatelles aux coques",
+        ingredients: [
+            {
+                name: "Coques",
+                amount: 500,
+                unit: "g",
+            },
+            {
+                name: "Tagliatelles",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Oignon",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Vin blanc",
+                amount: 25,
+                unit: "cl",
+            },
+            {
+                name: "Crème",
+                amount: 50,
+                unit: "g",
+            },
+        ],
+        rapidity: "Long",
+        preparation: ["Préparer les coques", "Préparer l'oignon et le trancher"],
+        steps: ["Faire bouillir l'eau avec l'oignon et le vin blanc", "Verser les coques dans l'eau", "Cuire les tagliatelles", "Mélanger les coques et les tagliatelles avec la crème"],
     },
 ]
 
