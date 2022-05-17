@@ -9,37 +9,6 @@ const recipes = [
     // Hachis parmentier de kefta (pomme de terre, carotte)
     // Cake à la pomme de terre (+ emmental)
     {
-        name: "Chips de navet",
-        ingredients: [
-            {
-                name: "Navet",
-                amount: 1,
-                unit: "p"
-            },
-        ],
-        rapidity: "Rapide",
-        preparation: ["Préparer le navet", "Trancher le navet en lamelles"],
-        steps: [],
-    },
-    {
-        name: "Tartine de pesto",
-        ingredients: [
-            {
-                name: "Pain",
-                amount: 25,
-                unit: "g",
-            },
-            {
-                name: "Pesto",
-                amount: 25,
-                unit: "g",
-            },
-        ],
-        rapidity: "Rapide",
-        preparation: ["Trancher le pain"],
-        steps: ["Griller les tranches au grille-pain", "Tartiner les tranches avec le pesto"],
-    },
-    {
         name: "Salade à la vinaigrette moutardée",
         ingredients: [
             {
@@ -175,6 +144,29 @@ const recipes = [
         rapidity: "Rapide",
         preparation: ["Laver la salade", "Préparer l'oignon, les champignons et les trancher", "Trancher la tomme, la tomate et arracher une feuille de salade"],
         steps: ["Faire revenir les champignons à la poêle", "Cuire l'oeuf à la poêle et y ajouter du poivre", "Griller les pains au grille-pain", "Assembler moutarde, champignon, salade, fromage, tomate, oignon, oeuf et ketchup dans les pains"],
+    },
+    {
+        name: "Riz à la sauce curry",
+        ingredients: [
+            {
+                name: "Riz",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Sauce curry",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Petits pois",
+                amount: 200,
+                unit: "g",
+            },
+        ],
+        rapidity: "Rapide",
+        preparation: [],
+        steps: ["Cuire le riz", "Disposer le riz, la sauce curry et les petits pois"],
     },
     {
         name: "Fajita",
