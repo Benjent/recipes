@@ -8,12 +8,12 @@ import formatting from "../utils/formatting"
         <template v-if="mq.current === 'xs'">
             <ul>
                 <li v-for="edible, index in currentMonthEdibles" :key="edible.name" :class="[ 'table__body__row', 'table__body__row--current', { 'table__body__row--bordered': index === currentMonthEdibles.length - 1 }]">
-                    <div class="table__body__cell--head table__cell--highlight">{{edible.name}}</div>
-                    <div>{{getEdiblePeriod(edible)}}</div>
+                    <span class="table__body__cell--head table__cell--highlight">{{edible.name}}&nbsp;:&nbsp;</span>
+                    <span>{{getEdiblePeriod(edible)}}</span>
                 </li>
                 <li v-for="edible in edibles.filter((f) => !f.months.includes(currentMonth))" :key="edible.name">
-                    <div class="table__body__cell--head">{{edible.name}}</div>
-                    <div>{{getEdiblePeriod(edible)}}</div>
+                    <span class="table__body__cell--head">{{edible.name}}&nbsp;:&nbsp;</span>
+                    <span>{{getEdiblePeriod(edible)}}</span>
                 </li>
             </ul>
         </template>
@@ -75,7 +75,7 @@ export default {
             return formatting.shortenMonthName(mapper[month], this.mq.current)
         },
         getEdiblePeriod(edible) {
-            const start = [4, 8, 10].includes(edible.months[0]) ? "D'": "De "
+            const start = [4, 8, 10].includes(edible.months[0]) ? "d'": "de "
             const from = this.getMonthName(edible.months[0])
             const to = this.getMonthName(edible.months[edible.months.length - 1])
             return `${start}${from} à ${to}`

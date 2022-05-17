@@ -7,7 +7,7 @@ const app = createApp(App)
 app.use(Vue3Mq, {
     breakpoints: {
         xs: 0,
-        sm: 361,
+        sm: 321,
         md: 641, // +1
         lg: 1081, // +1
     }
