@@ -1,7 +1,9 @@
 const juices = [
-    // Jus brocoli radis tomate
+    { ingredients: ["Pomme", "Rhubarbe"] },
     { ingredients: ["Pomme", "Orange", "Gingembre"] },
     { ingredients: ["Carotte", "Citron", "Gingembre"] },
+    { ingredients: ["Pastèque", "Citron", "Pomme", "Menthe"] },
+    { ingredients: ["Brocoli", "Radis", "Tomate"] },
 ]
 
 export default juices
