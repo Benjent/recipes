@@ -1,4 +1,6 @@
 <script setup>
+import { category } from "./types"
+import categoryEmoji from "./assets/emojis/category"
 import appetizers from "./data/appetizers"
 import fruits from "./data/fruits"
 import juices from "./data/juices"
@@ -25,20 +27,16 @@ import Table from "./components/Table.vue"
 
         <h2 class="title--2">Recettes</h2>
         <section class="app__section">
-            <ul>
-                <li v-for="recipe in recipes" :key="recipe.name">
-                    <Accordion :title="recipe.name">
-                        <Recipe :recipe="recipe" />
-                    </Accordion>
-                </li>
-            </ul>
-            <ul>
-                <li v-for="recipe in recipes" :key="recipe.name">
-                    <Accordion :title="recipe.name">
-                        <Recipe :recipe="recipe" />
-                    </Accordion>
-                </li>
-            </ul>
+            <div v-for="category in Object.entries(category)" :key="category[0]" class="app__category">
+                <h3 class="title--3">{{category[1]}} {{categoryEmoji[category[1]]}}</h3>
+                <ul>
+                    <li v-for="recipe in recipes.filter((r) => r.category === category[1])" :key="recipe.name">
+                        <Accordion :title="recipe.name">
+                            <Recipe :recipe="recipe" />
+                        </Accordion>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <h2 class="title--2">Apéro</h2>
@@ -110,6 +108,10 @@ body {
     &__section {
         padding: 0 2rem;
         margin-bottom: 60px;
+    }
+
+    &__category {
+        margin-bottom: 20px;
     }
 }
 

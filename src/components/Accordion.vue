@@ -28,11 +28,12 @@ export default {
     border-radius: 4px;
     overflow: hidden;
 
-    &__title {
+    & &__title {
         cursor: pointer;
         user-select: none;
         background: var(--background);
         padding: 16px 22px;
+        margin-bottom: 0;
 
         &:hover {
             background: var(--cta);
