@@ -30,6 +30,8 @@ npm run build
 
 ### Deploy
 
+Deployment si triggered manually.
+
 ```sh
 ./deploy.sh
 ```
