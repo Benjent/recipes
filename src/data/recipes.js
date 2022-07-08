@@ -6,6 +6,9 @@ const recipes = [
     // Galette oeuf fromage
     // Omelette
     // Omelette au champignon
+    // Penne bolo lentlle
+    // burito riz pesto rosso
+    // enchiladas
     // Risotto coquillettes fromage
     // Riz froid radis fromage
     // Hachis parmentier de kefta (pomme de terre, carotte)
@@ -20,7 +23,7 @@ const recipes = [
                 unit: "p",
             },
             {
-                name: "Échalotte",
+                name: "Échalote",
                 amount: 1,
                 unit: "p",
             },
@@ -31,8 +34,37 @@ const recipes = [
             },
         ],
         rapidity: rapidity.FAST,
-        preparation: ["Laver la salade", "Préparer l'échalotte et la trancher"],
-        steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalotte"],
+        preparation: ["Laver la salade", "Préparer l'échalote et la trancher"],
+        steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalote"],
+    },
+    {
+        name: "Tomates feta",
+        category: category.SALAD,
+        ingredients: [
+            {
+                name: "Tomate",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Feta",
+                amount: 500,
+                unit: "g",
+            },
+            {
+                name: "Ail",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Moutarde",
+                amount: 25,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        preparation: ["Préparer la tomate et la trancher", "Trancher la feta", "Couper l'ail"],
+        steps: ["Mélanger moutarde, huile, ail, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Poivrer"],
     },
     {
         name: "Rouleau de betterave",
@@ -219,6 +251,35 @@ const recipes = [
         steps: ["Cuire le quinoa", "Mélanger la pastèque et la menthe avec le quinoa et laisser refroidir"],
     },
     {
+        name: "Fajita au maïs",
+        category: category.WRAP,
+        ingredients: [
+            {
+                name: "Tomate cerise",
+                amount: 50,
+                unit: "g",
+            },
+            {
+                name: "Emmental",
+                amount: 25,
+                unit: "g",
+            },
+            {
+                name: "Maïs",
+                amount: 50,
+                unit: "g",
+            },
+            {
+                name: "Galette de blé",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        preparation: ["Préparer les tomates et les trancher"],
+        steps: ["Pré-chauffer les galettes au micro-ondes", "Disposer les tomates, le maïs et l'emmental dans la galette et la rouler"],
+    },
+    {
         name: "Fajita",
         category: category.WRAP,
         ingredients: [
@@ -258,6 +319,88 @@ const recipes = [
         steps: ["Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Ajouter les falafels à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes", "Disposer le mélange dans la galette et la rouler"],
     },
     {
+        name: "Salade de lentilles",
+        category: category.SALAD,
+        ingredients: [
+            {
+                name: "Lentilles",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Radis",
+                amount: 10,
+                unit: "p",
+            },
+            {
+                name: "Myrtille",
+                amount: 50,
+                unit: "g",
+            },
+            {
+                name: "Roquette",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Laver la salade, les radis et les myrtilles", "Trancher les radis"],
+        steps: ["Cuire les lentilles", "Mélanger la salade, les radis et les myrtilles avec les lentilles"],
+    },
+    {
+        name: "Salade de pâtes au fenouil",
+        category: category.SALAD,
+        ingredients: [
+            {
+                name: "Pâtes",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Fenouil",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Tapenade",
+                amount: 25,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Laver ler fenouil et le trancher"],
+        steps: ["Pré-cuire les pâtes dans une casserole", "Mélanger les pâtes froides avec le fenouil et la tapenade"],
+    },
+    {
+        name: "Ravioles au bleu",
+        category: category.PASTA,
+        ingredients: [
+            {
+                name: "Ravioles",
+                amount: 500,
+                unit: "g",
+            },
+            {
+                name: "Bleu",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Noix",
+                amount: 5,
+                unit: "p",
+            },
+            {
+                name: "Ciboulette",
+                amount: 10,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Couper la ciboulette et le fromage", "Émietter les noix"],
+        steps: ["Cuire les ravioles", "Ajouter les ravioles dans la poêle avec le bleu", "Disposer la noix et la ciboulette"],
+    },
+    {
         name: "Galette de fondue de poireaux",
         category: category.GALETTE,
         ingredients: [
@@ -294,7 +437,36 @@ const recipes = [
         ],
         rapidity: rapidity.MEDIUM,
         preparation: ["Préparer l'oignon, l'échalote, les champignons et le poireau et les trancher"],
-        steps: ["Faire revenir l'oignon et les champignons à la poêle", "Ajouter l'échalotte et le poireau à la poêle", "Ajouter la crème et mélanger", "Faire griller la galette et y ajoutant la fondue de poireaux"],
+        steps: ["Faire revenir l'oignon et les champignons à la poêle", "Ajouter l'échalote et le poireau à la poêle", "Ajouter la crème et mélanger", "Faire griller la galette et y ajoutant la fondue de poireaux"],
+    },
+    {
+        name: "Muffins aux tomates et aux olives",
+        category: category.CAKE,
+        ingredients: [
+            {
+                name: "Oeuf",
+                amount: 3,
+                unit: "p",
+            },
+            {
+                name: "Tomates",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Farine",
+                amount: 150,
+                unit: "g",
+            },
+            {
+                name: "Levure",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Préparer la tomate et la trancher"],
+        steps: ["Mélanger les oeufs avec la farine et la levure", "Ajouter la tomate", "Epicer, poivrer et saler", "Verser le mélange dans des moules", "Cuire au four"],
     },
     {
         name: "Gnocchi à la crème",

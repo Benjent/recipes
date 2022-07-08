@@ -1,7 +1,9 @@
 import { category } from "../../types"
 
 export default Object.freeze({
+    // https://emojipedia.org/emoji/
     [category.BURGER]: `${String.fromCodePoint(0x1F354)}`,
+    [category.CAKE]: `${String.fromCodePoint(0x1F35E)}`,
     [category.DAHL]: `${String.fromCodePoint(0x1F35B)}`,
     [category.GALETTE]: `${String.fromCodePoint(0x1FAD3)}`,
     [category.PASTA]: `${String.fromCodePoint(0x1F35D)}`,
