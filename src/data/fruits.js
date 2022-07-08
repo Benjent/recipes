@@ -2,24 +2,24 @@ import sorting from "../utils/sorting"
 
 let fruits = [
     {
-        name: "Pomme",
-        months: [1, 2, 3, 4, 8, 9, 10, 11, 12],
-        color: "#f1e6b2",
-    },
-    {
         name: "Abricot",
         months: [6, 7, 8],
         color: "#e28b13",
     },
     {
-        name: "Avocat",
-        months: [1, 2, 3, 4],
+        name: "Ananas*",
+        months: [1, 12],
+        color: "#f0e284",
+    },
+    {
+        name: "Avocat*",
+        months: [1, 2, 3, 4, 5, 10, 11, 12],
         color: "#c5cf75",
     },
     {
-        name: "Mûre",
-        months: [8, 9],
-        color: "#41353f",
+        name: "Banane*",
+        months: [1, 2, 3, 4, 5, 6],
+        color: "#e6c731",
     },
     {
         name: "Cassis",
@@ -27,14 +27,19 @@ let fruits = [
         color: "#212a46",
     },
     {
-        name: "Myrtille",
-        months: [7, 8, 9],
-        color: "#508ab4",
+        name: "Cerise",
+        months: [5, 6, 7, 8],
+        color: "#911032",
     },
     {
-        name: "Cerise",
-        months: [6, 7, 8],
-        color: "#911032",
+        name: "Citron",
+        months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        color: "#e8d331",
+    },
+    {
+        name: "Citron cavier",
+        months: [12],
+        color: "#ca573e",
     },
     {
         name: "Chataîgne",
@@ -47,24 +52,9 @@ let fruits = [
         color: "#e68c32",
     },
     {
-        name: "Quetsche",
-        months: [8, 9, 10],
-        color: "#d29b39",
-    },
-    {
-        name: "Raisin",
+        name: "Coing",
         months: [9, 10],
-        color: "#a850b3",
-    },
-    {
-        name: "Pamplemousse",
-        months: [2, 3, 4, 5, 6],
-        color: "#ee9386",
-    },
-    {
-        name: "Reine-claude",
-        months: [9],
-        color: "#d6c126",
+        color: "#e2d0a8",
     },
     {
         name: "Figue",
@@ -72,19 +62,54 @@ let fruits = [
         color: "#d55e54",
     },
     {
-        name: "Noisette",
-        months: [9, 10, 11],
-        color: "#bb603e",
+        name: "Fraise",
+        months: [5, 6, 7, 8, 9],
+        color: "#e32c31",
+    },
+    {
+        name: "Framboise",
+        months: [5, 6, 7, 8, 9],
+        color: "#c94155",
+    },
+    {
+        name: "Fruit de la passion*",
+        months: [1, 2, 3, 4, 10, 11, 12],
+        color: "#933e58",
+    },
+    {
+        name: "Goyave*",
+        months: [5],
+        color: "#b8ca4a",
+    },
+    {
+        name: "Grenade",
+        months: [1, 2, 11, 12],
+        color: "#a6001c",
+    },
+    {
+        name: "Groseille",
+        months: [6, 7, 8, 9],
+        color: "#f10f0f",
+    },
+    {
+        name: "Kaki",
+        months: [1, 10, 11, 12],
+        color: "#e75b00",
+    },
+    {
+        name: "Kiwano",
+        months: [8, 9, 10],
+        color: "#de9d3b",
     },
     {
         name: "Kiwi",
-        months: [1, 2, 3, 11, 12],
+        months: [1, 2, 3, 4, 11, 12],
         color: "#a4af57",
     },
     {
-        name: "Citron",
-        months: [1, 2, 12],
-        color: "#e8d331",
+        name: "Litchi*",
+        months: [1],
+        color: "#de3036",
     },
     {
         name: "Mandarine",
@@ -92,13 +117,13 @@ let fruits = [
         color: "#eaa536",
     },
     {
-        name: "Mangue",
-        months: [1, 2, 3, 4, 5, 11, 12],
+        name: "Mangue*",
+        months: [1, 2, 3, 4, 5, 9, 10, 11, 12],
         color: "#efac00",
     },
     {
         name: "Melon",
-        months: [6, 7, 8, 9],
+        months: [6, 7, 8, 9, 10],
         color: "#e9ad64",
     },
     {
@@ -107,14 +132,49 @@ let fruits = [
         color: "#c0b043",
     },
     {
+        name: "Mûre",
+        months: [8, 9],
+        color: "#41353f",
+    },
+    {
+        name: "Myrtille",
+        months: [7, 8, 9],
+        color: "#508ab4",
+    },
+    {
         name: "Nectarine",
-        months: [7, 8],
+        months: [7, 8, 9],
         color: "#ead9a6",
     },
     {
+        name: "Nèfle",
+        months: [5, 6, 7],
+        color: "#dfa150",
+    },
+    {
+        name: "Noisette",
+        months: [1, 9, 10, 11, 12],
+        color: "#bb603e",
+    },
+    {
+        name: "Noix",
+        months: [1, 9, 10],
+        color: "#ad7e46",
+    },
+    {
         name: "Orange",
-        months: [1, 2, 3, 12],
+        months: [1, 2, 3, 11, 12],
         color: "#f09c00",
+    },
+    {
+        name: "Pamplemousse",
+        months: [1, 2, 3, 4, 5, 6],
+        color: "#ee9386",
+    },
+    {
+        name: "Pastèque",
+        months: [6, 7, 8, 9],
+        color: "#f2675c",
     },
     {
         name: "Pêche",
@@ -122,64 +182,49 @@ let fruits = [
         color: "#edc05f",
     },
     {
+        name: "Physalis",
+        months: [12],
+        color: "#edaa47",
+    },
+    {
         name: "Poire",
         months: [1, 2, 3, 8, 9, 10, 11, 12],
         color: "#e9decd",
     },
     {
-        name: "Kaki",
-        months: [1, 10, 11, 12],
-        color: "#e75b00",
+        name: "Pomelo",
+        months: [1, 2, 3, 4, 10, 11, 12],
+        color: "#dad56c",
     },
     {
-        name: "Ananas",
-        months: [1],
-        color: "#f0e284",
+        name: "Pomme",
+        months: [1, 2, 3, 4, 8, 9, 10, 11, 12],
+        color: "#f1e6b2",
     },
     {
         name: "Prune",
-        months: [7, 8, 9],
+        months: [6, 7, 8, 9, 10],
         color: "#c9a94c",
     },
     {
-        name: "Grenade",
-        months: [1, 2, 11, 12],
-        color: "#a6001c",
+        name: "Quetsche",
+        months: [8, 9, 10],
+        color: "#d29b39",
     },
     {
-        name: "Coing",
-        months: [9, 10],
-        color: "#e2d0a8",
+        name: "Raisin",
+        months: [8, 9, 10, 11],
+        color: "#a850b3",
     },
     {
-        name: "Framboise",
-        months: [6, 7, 8],
-        color: "#c94155",
-    },
-    {
-        name: "Groseille",
-        months: [6, 7, 8],
-        color: "#f10f0f",
+        name: "Reine-claude",
+        months: [9],
+        color: "#d6c126",
     },
     {
         name: "Rhubarbe",
-        months: [4, 5, 6],
+        months: [4, 5, 6, 7],
         color: "#e8b96b",
-    },
-    {
-        name: "Fraise",
-        months: [5, 6, 7],
-        color: "#e32c31",
-    },
-    {
-        name: "Noix",
-        months: [9, 10],
-        color: "#ad7e46",
-    },
-    {
-        name: "Pastèque",
-        months: [6, 7, 8],
-        color: "#f2675c",
     },
 ]
 
