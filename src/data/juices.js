@@ -1,5 +1,6 @@
 const juices = [
     { ingredients: ["Pomme", "Rhubarbe"] },
+    { ingredients: ["Pomme", "Céleri"] },
     { ingredients: ["Pomme", "Orange", "Gingembre"] },
     { ingredients: ["Carotte", "Citron", "Gingembre"] },
     { ingredients: ["Pastèque", "Citron", "Pomme", "Menthe"] },
