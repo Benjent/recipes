@@ -4,8 +4,8 @@ const recipes = [
     // TODO ajouter recettes below
     // Dahl de lentilles
     // Galette oeuf fromage
-    // Omelette
     // Omelette au champignon
+    // Taboulé : 200g de semoule fine (cuire semoule avant...), équivalent d'eau bouillante (bouilloire), verser dans un plat avec raisins secs et tomates cerises, attendre 10 minute couvercle)
     // Penne bolo lentlle
     // burito riz pesto rosso
     // enchiladas
@@ -278,6 +278,64 @@ const recipes = [
         rapidity: rapidity.FAST,
         preparation: ["Préparer les tomates et les trancher"],
         steps: ["Pré-chauffer les galettes au micro-ondes", "Disposer les tomates, le maïs et l'emmental dans la galette et la rouler"],
+    },
+    {
+        name: "Omelette aux tomates cerise",
+        category: category.OMELETTE,
+        ingredients: [
+            {
+                name: "Oeuf",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Tomates cerises",
+                amount: 6,
+                unit: "p",
+            },
+            {
+                name: "Ciboulette",
+                amount: 5,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        preparation: ["Laver les tomates et les trancher"],
+        steps: ["Mélanger les oeufs", "Ajouter les tomates et la ciboulette, saler, poivrer", "Cuire le mélange à la poêle"],
+    },
+    {
+        name: "Salade de pois chiches",
+        category: category.SALAD,
+        ingredients: [
+            {
+                name: "Roquette",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Oignon rouge",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Orange",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Pois chiche",
+                amount: 500,
+                unit: "g",
+            },
+            {
+                name: "Cumin",
+                amount: 5,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        preparation: ["Laver la salade", "Préparer l'oignon et le trancher", "Rincer les pois chiche"],
+        steps: ["Mélanger dans un saladier salade, pois chiche, oignon", "Ajouter cumin, huile d'olive et presser l'orange sur le mélange"],
     },
     {
         name: "Fajita",
@@ -582,7 +640,7 @@ const recipes = [
         ],
         rapidity: rapidity.MEDIUM,
         preparation: ["Préparer les pommes de terre et les trancher"],
-        steps: ["Faire revenir les pommes de terre à la poêle et les épicer", "Remuer les oeufs avec la ciboulette", "TODO"],
+        steps: ["Faire revenir les pommes de terre à la poêle et les épicer", "Remuer les oeufs avec la ciboulette", "Cuire le mélange à la poêle"],
     },
     {
         name: "Dahl de lentilles de corail",
