@@ -8,6 +8,7 @@ export default Object.freeze({
     [category.GALETTE]: `${String.fromCodePoint(0x1FAD3)}`,
     [category.PASTA]: `${String.fromCodePoint(0x1F35D)}`,
     [category.OMELETTE]: `${String.fromCodePoint(0x1F373)}`,
+    [category.PIE]: `${String.fromCodePoint(0x1F967)}`,
     [category.RICE]: `${String.fromCodePoint(0x1F35A)}`,
     [category.SALAD]: `${String.fromCodePoint(0x1F957)}`,
     [category.STUFFED]: `${String.fromCodePoint(0x1F345)}`,

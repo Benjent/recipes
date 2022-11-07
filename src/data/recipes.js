@@ -386,6 +386,11 @@ const recipes = [
                 unit: "g",
             },
             {
+                name: "Feta",
+                amount: 250,
+                unit: "g",
+            },
+            {
                 name: "Radis",
                 amount: 10,
                 unit: "p",
@@ -402,8 +407,8 @@ const recipes = [
             },
         ],
         rapidity: rapidity.MEDIUM,
-        preparation: ["Laver la salade, les radis et les myrtilles", "Trancher les radis"],
-        steps: ["Cuire les lentilles", "Mélanger la salade, les radis et les myrtilles avec les lentilles"],
+        preparation: ["Laver la salade, les radis et les myrtilles", "Trancher les radis et la feta"],
+        steps: ["Cuire les lentilles", "Mélanger la salade, la feta, les radis et les myrtilles avec les lentilles"],
     },
     {
         name: "Salade de pâtes au fenouil",
@@ -568,6 +573,45 @@ const recipes = [
         rapidity: rapidity.MEDIUM,
         preparation: ["Préparer les champignons et retirer leur pied"],
         steps: ["Farcir les champignons de crème et ajouter des épices", "Cuir les champignons au four"]
+    },
+    {
+        name: "Tarte aux épinards",
+        category: category.PIE,
+        ingredients: [
+            {
+                name: "Pâte feuilletée",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Epinards",
+                amount: 500,
+                unit: "g",
+            },
+            {
+                name: "Oeuf",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Crème",
+                amount: 20,
+                unit: "cl",
+            },
+            {
+                name: "Fromage de chèvre",
+                amount: 50,
+                unit: "g",
+            },
+            {
+                name: "Noix de muscade",
+                amount: 10,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Trouer la pâte feuilletée", "Préparer les épinards"],
+        steps: ["Précuire la pâte au four", "Cuire les épinards", "Mélanger l'oeuf avec la crème et la noix de muscade", "Disposer les épinards et le chèvre sur la tarte et y verser le mélange", "Cuire la tarte"]
     },
     {
         name: "Salade césar",
