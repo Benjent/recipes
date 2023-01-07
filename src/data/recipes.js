@@ -2,7 +2,6 @@ import { rapidity, category } from "../types"
 
 const recipes = [
     // TODO ajouter recettes below
-    // Dahl de lentilles
     // Galette oeuf fromage
     // Omelette au champignon
     // Taboulé : 200g de semoule fine (cuire semoule avant...), équivalent d'eau bouillante (bouilloire), verser dans un plat avec raisins secs et tomates cerises, attendre 10 minute couvercle)
@@ -36,6 +35,20 @@ const recipes = [
         rapidity: rapidity.FAST,
         preparation: ["Laver la salade", "Préparer l'échalote et la trancher"],
         steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalote"],
+    },
+    {
+        name: "Butternut rôti",
+        category: category.VEGETABLE,
+        ingredients: [
+            {
+                name: "Butternut",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        preparation: ["Préparer le butternut et le trancher"],
+        steps: ["Huiler les tranches, saler, poivrer", "Enfourner une quarantaine de minutes"],
     },
     {
         name: "Tomates feta",
@@ -338,6 +351,52 @@ const recipes = [
         steps: ["Mélanger dans un saladier salade, pois chiche, oignon", "Ajouter cumin, huile d'olive et presser l'orange sur le mélange"],
     },
     {
+        name: "Riz à la sauce tomate",
+        category: category.RICE,
+        ingredients: [
+            {
+                name: "Riz",
+                amount: 100,
+                unit: "g",
+            },
+            {
+                name: "Sauce tomate",
+                amount: 100,
+                unit: "ml",
+            },
+            {
+                name: "Noix de cajou",
+                amount: 25,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        steps: ["Cuire le riz", "Chauffer la sauce tomate", "Mélanger le tout avec la noix de cajou et poivrer"],
+    },
+    {
+        name: "Galette saucisse",
+        category: category.GALETTE,
+        ingredients: [
+            {
+                name: "Galette de sarrasin",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Saucisse végé",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Moutarde",
+                amount: 5,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        steps: ["Pré-cuire la saucisse à la poêle", "Cuire la galette à la poêle avec la saucisse et la moutarde"],
+    },
+    {
         name: "Fajita",
         category: category.WRAP,
         ingredients: [
@@ -409,6 +468,35 @@ const recipes = [
         rapidity: rapidity.MEDIUM,
         preparation: ["Laver la salade, les radis et les myrtilles", "Trancher les radis et la feta"],
         steps: ["Cuire les lentilles", "Mélanger la salade, la feta, les radis et les myrtilles avec les lentilles"],
+    },
+    {
+        name: "Pizza aux champignons base crème",
+        category: category.PIZZA,
+        ingredients: [
+            {
+                name: "Pâte à pizza",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Champignons",
+                amount: 10,
+                unit: "p",
+            },
+            {
+                name: "Emmental",
+                amount: 25,
+                unit: "g",
+            },
+            {
+                name: "Yaourt à la grecque",
+                amount: 125,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Préparer les champignons et les trancher", "Dérouler la pâte et répandre le yaourt et les champignons"],
+        steps: ["Arroser d'huile la pizza", "Enfourner la pizza une trentaine de minutes"],
     },
     {
         name: "Salade de pâtes au fenouil",
@@ -612,6 +700,30 @@ const recipes = [
         rapidity: rapidity.MEDIUM,
         preparation: ["Trouer la pâte feuilletée", "Préparer les épinards"],
         steps: ["Précuire la pâte au four", "Cuire les épinards", "Mélanger l'oeuf avec la crème et la noix de muscade", "Disposer les épinards et le chèvre sur la tarte et y verser le mélange", "Cuire la tarte"]
+    },
+    {
+        name: "Pissaladière aux oignons",
+        category: category.PIE,
+        ingredients: [
+            {
+                name: "Pâte feuilletée",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Oignons",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Câpres",
+                amount: 10,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Trouer la pâte feuilletée", "Préparer les oignons et les trancher"],
+        steps: ["Précuire la pâte au four", "Faire revenir les oignons avec curry et muscade", "Disposer les oignons sur la tarte", "Cuire la tarte"]
     },
     {
         name: "Salade césar",

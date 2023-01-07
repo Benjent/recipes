@@ -14,6 +14,7 @@ const category = Object.freeze({
     SALAD: "Salade",
     STUFFED: "Légume farcis",
     TABBOULEH: "Taboulé",
+    VEGETABLE: "Légume",
     WRAP: "Wrap",
 })
 
