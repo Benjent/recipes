@@ -1,6 +1,8 @@
 # recipes
 
-Tiny project listing recipes I like.
+Tiny project listing meatless recipes I like.
+
+[See it live](https://benjent.github.io/recipes/).
 
 ## Recommended IDE Setup
 
