@@ -436,6 +436,35 @@ const recipes = [
         steps: ["Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Ajouter les falafels à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes", "Disposer le mélange dans la galette et la rouler"],
     },
     {
+        name: "Spaghetti coco",
+        category: category.PASTA,
+        ingredients: [
+            {
+                name: "Spaghetti",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Carotte",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Gingembre",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Crème de coco",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Préparer et râper le gingembre et les carottes"],
+        steps: ["Cuire les spaghettis", "Faire revenir les carottes et le gingembre à la poêle", "Ajouter la crème de coco aux carottes", "Mélanger le tout"],
+    },
+    {
         name: "Salade de lentilles",
         category: category.SALAD,
         ingredients: [
