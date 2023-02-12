@@ -2,7 +2,6 @@ import { rapidity, category } from "../types"
 
 const recipes = [
     // TODO ajouter recettes below
-    // Galette oeuf fromage
     // Omelette au champignon
     // Taboulé : 200g de semoule fine (cuire semoule avant...), équivalent d'eau bouillante (bouilloire), verser dans un plat avec raisins secs et tomates cerises, attendre 10 minute couvercle)
     // Penne bolo lentlle
@@ -78,6 +77,30 @@ const recipes = [
         rapidity: rapidity.FAST,
         preparation: ["Préparer la tomate et la trancher", "Trancher la feta", "Couper l'ail"],
         steps: ["Mélanger moutarde, huile, ail, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Poivrer"],
+    },
+    {
+        name: "Betterave feta",
+        category: category.SALAD,
+        ingredients: [
+            {
+                name: "Betterave",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Feta",
+                amount: 500,
+                unit: "g",
+            },
+            {
+                name: "Moutarde",
+                amount: 25,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        preparation: ["Trancher la betterave", "Trancher la feta"],
+        steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Poivrer"],
     },
     {
         name: "Rouleau de betterave",
@@ -395,6 +418,29 @@ const recipes = [
         ],
         rapidity: rapidity.FAST,
         steps: ["Pré-cuire la saucisse à la poêle", "Cuire la galette à la poêle avec la saucisse et la moutarde"],
+    },
+    {
+        name: "Galette oeuf fromage",
+        category: category.GALETTE,
+        ingredients: [
+            {
+                name: "Galette de sarrasin",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Oeuf",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Fromage",
+                amount: 50,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        steps: ["Cuire la galette à la poêle avec l'oeuf et le fromage"],
     },
     {
         name: "Fajita",
