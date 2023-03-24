@@ -2,6 +2,7 @@ import { rapidity, category } from "../types"
 
 const recipes = [
     // TODO ajouter recettes below
+    // Désserts - banane flambée
     // Omelette au champignon
     // Taboulé : 200g de semoule fine (cuire semoule avant...), équivalent d'eau bouillante (bouilloire), verser dans un plat avec raisins secs et tomates cerises, attendre 10 minute couvercle)
     // Penne bolo lentlle
@@ -34,6 +35,24 @@ const recipes = [
         rapidity: rapidity.FAST,
         preparation: ["Laver la salade", "Préparer l'échalote et la trancher"],
         steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalote"],
+    },
+    {
+        name: "Gratin de tortellinis",
+        category: category.GRATIN,
+        ingredients: [
+            {
+                name: "Tortellinis",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Gaspacho",
+                amount: 50,
+                unit: "cl",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        steps: ["Baigner les tortellinis dans un plat avec le gaspacho", "Ajouter poivre et herbes", "Enfourner une quarantaine de minutes"],
     },
     {
         name: "Butternut rôti",
