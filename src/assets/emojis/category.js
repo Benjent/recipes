@@ -6,6 +6,7 @@ export default Object.freeze({
     [category.CAKE]: `${String.fromCodePoint(0x1F35E)}`,
     [category.DAHL]: `${String.fromCodePoint(0x1F35B)}`,
     [category.GALETTE]: `${String.fromCodePoint(0x1FAD3)}`,
+    [category.GRATIN]: `${String.fromCodePoint(0x1F372)}`,
     [category.OMELETTE]: `${String.fromCodePoint(0x1F373)}`,
     [category.PASTA]: `${String.fromCodePoint(0x1F35D)}`,
     [category.PIE]: `${String.fromCodePoint(0x1F967)}`,

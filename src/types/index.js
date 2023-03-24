@@ -8,6 +8,7 @@ const category = Object.freeze({
     BURGER: "Burger",
     DAHL: "Dahl",
     GALETTE: "Galette",
+    GRATIN: "Gratin",
     OMELETTE: "Omelette",
     PASTA: "Pâtes",
     PIZZA: "Pizza",
