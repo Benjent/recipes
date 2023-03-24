@@ -73,6 +73,34 @@ const appetizers = [
         preparation: ["Préparer la tomate et la trancher"],
         steps: ["Tartiner le pain de fromage", "Disposer la tomate sur la tartine"],
     },
+    {
+        name: "Houmous",
+        ingredients: [
+            {
+                name: "Pois chiche",
+                amount: 350,
+                unit: "g",
+            },
+            {
+                name: "Tahin",
+                amount: 100,
+                unit: "g",
+            },
+            {
+                name: "Citron",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Ail",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Egouter les pois chiche", "Préparer l'ail et l'écraser"],
+        steps: ["Mixer les pois chiche avec le tahin, le citron et l'ail"],
+    },
 ]
 
 export default appetizers
