@@ -25,11 +25,11 @@ import formatting from "../utils/formatting"
             <tbody class="table__body">
                 <tr v-for="edible, index in currentMonthEdibles" :key="edible.name" :class="[ 'table__body__row', 'table__body__row--current', { 'table__body__row--bordered': index === currentMonthEdibles.length - 1 }]">
                     <th :colspan="edibleColSpan" scope="row" class="table__body__cell--head table__cell--highlight">{{edible.name}}</th>
-                    <td v-for="month in months" :key="`${edible.name}_${getMonthName(month)}`" :style="{ 'background': edible.months.includes(month) && edible.color }"></td>
+                    <td v-for="month in months" :key="`${edible.name}_${getMonthName(month)}`" :class="{ 'table__cell--highlight-border': month === currentMonth }" :style="{ 'background': edible.months.includes(month) && edible.color }"></td>
                 </tr>
                 <tr v-for="edible in edibles.filter((f) => !f.months.includes(currentMonth))" :key="edible.name">
                     <th :colspan="edibleColSpan" scope="row" class="table__body__cell--head">{{edible.name}}</th>
-                    <td v-for="month in months" :key="`${edible.name}_${getMonthName(month)}`" :style="{ 'background': edible.months.includes(month) && edible.color }"></td>
+                    <td v-for="month in months" :key="`${edible.name}_${getMonthName(month)}`" :class="{ 'table__cell--highlight-border': month === currentMonth }" :style="{ 'background': edible.months.includes(month) && edible.color }"></td>
                 </tr>
             </tbody>
         </template>
@@ -112,6 +112,10 @@ export default {
     &__cell {
         &--highlight {
             color: var(--primary);
+        }
+
+        &--highlight-border {
+            border: solid 1px var(--primary);
         }
     }
 }
