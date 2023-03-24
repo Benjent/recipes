@@ -16,7 +16,7 @@ import Ingredient from "./Ingredient.vue"
                 </li>
             </ul>
         </div>
-        <div v-if="recipe.preparation.length > 0" class="recipe__category">
+        <div v-if="recipe.preparation?.length > 0" class="recipe__category">
             <div class="recipe__category__icon">🔪</div>
             <ol  class="recipe__preparation">
                 <li v-for="preparation in recipe.preparation" :key="preparation">{{preparation}}</li>
