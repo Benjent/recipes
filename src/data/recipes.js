@@ -8,7 +8,6 @@ const recipes = [
     // Penne bolo lentlle
     // burito riz pesto rosso
     // enchiladas
-    // Risotto coquillettes fromage
     // Riz froid radis fromage
     // Hachis parmentier de kefta (pomme de terre, carotte)
     // Cake à la pomme de terre (+ emmental)
@@ -824,7 +823,7 @@ const recipes = [
         category: category.SALAD,
         ingredients: [
             {
-                name: category.SALAD,
+                name: "Salade",
                 amount: 1,
                 unit: "p",
             },
@@ -867,6 +866,34 @@ const recipes = [
         rapidity: rapidity.MEDIUM,
         preparation: ["Laver la salade", "Couper les tomates cerises en deux", "Préparer l'ail et l'écraser"],
         steps: ["Faire revenir le tofu à la poêle", "Remuer l'oeuf avec la mayonnaise, l'huile, le jus de citron et du poivre", "Remuer la salade avec les tomates, l'ail, le tofu et le mélange"],
+    },
+    {
+        name: "Risotto de coquillettes",
+        category: category.PASTA,
+        ingredients: [
+            {
+                name: "Bouillon de légumes",
+                amount: 100,
+                unit: "cl",
+            },
+            {
+                name: "Coquillettes",
+                amount: 300,
+                unit: "g",
+            },
+            {
+                name: "Petits poids",
+                amount: 300,
+                unit: "g",
+            },
+            {
+                name: "Fromage ail et fines herbes",
+                amount: 200,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        steps: ["Mélanger coquillettes et petits pois dans une cocotte avec le bouillon", "Ajouter le fromage avec un peu d'huile au mélange", "Saler et poivrer"],
     },
     {
         name: "Omelette à la pomme de terre",
