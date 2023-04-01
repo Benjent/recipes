@@ -2,6 +2,7 @@
 import { category } from "./types"
 import categoryEmoji from "./assets/emojis/category"
 import appetizers from "./data/appetizers"
+import desserts from "./data/desserts"
 import fruits from "./data/fruits"
 import juices from "./data/juices"
 import recipes from "./data/recipes"
@@ -45,6 +46,17 @@ import Table from "./components/Table.vue"
                 <li v-for="appetizer in appetizers" :key="appetizer.name">
                     <Accordion :title="appetizer.name">
                         <Recipe :recipe="appetizer" />
+                    </Accordion>
+                </li>
+            </ul>
+        </section>
+
+        <h2 class="title--2">Dessert</h2>
+        <section class="app__section">
+            <ul>
+                <li v-for="dessert in desserts" :key="dessert.name">
+                    <Accordion :title="dessert.name">
+                        <Recipe :recipe="dessert" />
                     </Accordion>
                 </li>
             </ul>
