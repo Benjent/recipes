@@ -529,6 +529,45 @@ const recipes = [
         steps: ["Cuire les spaghettis", "Faire revenir les carottes et le gingembre à la poêle", "Ajouter la crème de coco aux carottes", "Mélanger le tout"],
     },
     {
+        name: "Spaghetti bolognaise",
+        category: category.PASTA,
+        ingredients: [
+            {
+                name: "Spaghetti",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Falafel",
+                amount: 10,
+                unit: "p",
+            },
+            {
+                name: "Gingembre",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Ail",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Sauce tomate",
+                amount: 50,
+                unit: "cl",
+            },
+            {
+                name: "Vin rouge",
+                amount: 50,
+                unit: "cl",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Préparer ail et gingembre"],
+        steps: ["Faire revenir l'ail et le gingembre avec les falafels à la poêle", "Ajouter le vin", "Ajouter la sauce tomate et mélanger", "Cuire les spaghettis", "Mélanger le tout"],
+    },
+    {
         name: "Salade de lentilles",
         category: category.SALAD,
         ingredients: [
