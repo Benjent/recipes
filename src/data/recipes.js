@@ -628,7 +628,7 @@ const recipes = [
         ],
         rapidity: rapidity.MEDIUM,
         preparation: ["Préparer les champignons et les trancher", "Dérouler la pâte et répandre le yaourt et les champignons"],
-        steps: ["Arroser d'huile la pizza", "Enfourner la pizza une trentaine de minutes"],
+        steps: ["Arroser d'huile la pizza", "Répandre l'emmental", "Enfourner la pizza une trentaine de minutes"],
     },
     {
         name: "Salade de pâtes au fenouil",
