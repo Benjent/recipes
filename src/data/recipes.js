@@ -907,6 +907,45 @@ const recipes = [
         steps: ["Faire revenir le tofu à la poêle", "Remuer l'oeuf avec la mayonnaise, l'huile, le jus de citron et du poivre", "Remuer la salade avec les tomates, l'ail, le tofu et le mélange"],
     },
     {
+        name: "Salade d'endive",
+        category: category.SALAD,
+        ingredients: [
+            {
+                name: "Endive",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Pomme",
+                amount: 2,
+                unit: "p",
+            },
+            {
+                name: "Concombre",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Tomate",
+                amount: 2,
+                unit: "p",
+            },
+            {
+                name: "Carotte",
+                amount: 1,
+                unit: "g",
+            },
+            {
+                name: "Comté",
+                amount: 250,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Laver la salade", "Préparer et trancher les pommes, le concombre, les tomates, la carotte et le comté"],
+        steps: ["Mélanger le tout"],
+    },
+    {
         name: "Risotto de coquillettes",
         category: category.PASTA,
         ingredients: [
