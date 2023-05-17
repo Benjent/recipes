@@ -13,6 +13,19 @@ const recipes = [
     // Cake à la pomme de terre (+ emmental)
     // Pancakes
     {
+        name: "Oeufs brouillés",
+        category: category.SALAD,
+        ingredients: [
+            {
+                name: "Oeuf",
+                amount: 4,
+                unit: "p",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        steps: ["Brouiller les oeufs", "Epicer"],
+    },
+    {
         name: "Salade à la vinaigrette moutardée",
         category: category.SALAD,
         ingredients: [
