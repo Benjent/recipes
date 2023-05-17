@@ -11,6 +11,7 @@ const recipes = [
     // Riz froid radis fromage
     // Hachis parmentier de kefta (pomme de terre, carotte)
     // Cake à la pomme de terre (+ emmental)
+    // Pancakes
     {
         name: "Salade à la vinaigrette moutardée",
         category: category.SALAD,
@@ -34,6 +35,40 @@ const recipes = [
         rapidity: rapidity.FAST,
         preparation: ["Laver la salade", "Préparer l'échalote et la trancher"],
         steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalote"],
+    },
+    {
+        name: "Risotto de betterave",
+        category: category.RICE,
+        ingredients: [
+            {
+                name: "Bouillon de légumes",
+                amount: 100,
+                unit: "cl",
+            },
+            {
+                name: "Betterave",
+                amount: 2,
+                unit: "p",
+            },
+            {
+                name: "Riz",
+                amount: 300,
+                unit: "g",
+            },
+            {
+                name: "Parmesan",
+                amount: 50,
+                unit: "g",
+            },
+            {
+                name: "Herbes",
+                amount: 10,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        preparation: ["Trancher les betteraves"],
+        steps: ["Mélanger betteraves et riz dans une cocotte avec le bouillon", "Ajouter le fromage et épicer", "Saler et poivrer"],
     },
     {
         name: "Gratin de tortellinis",
@@ -1084,6 +1119,50 @@ const recipes = [
         rapidity: rapidity.LONG,
         preparation: ["Préparer les champignons, l'oignon, l'ail et les trancher"],
         steps: ["Faire revenir l'ail et l'oignon à la poêle", "Ajouter les champignons à la poêle", "Ajouter le riz avec le vin blanc", "Ajouter régulièrement le bouillon jusqu'à épuisement", "Ajouter le parmesan"],
+    },
+    {
+        name: "Paëlla",
+        category: category.RICE,
+        ingredients: [
+            {
+                name: "Riz",
+                amount: 500,
+                unit: "g",
+            },
+            {
+                name: "Poivron",
+                amount: 2,
+                unit: "p",
+            },
+            {
+                name: "Petit pois",
+                amount: 400,
+                unit: "g",
+            },
+            {
+                name: "Saucisse végé",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Safran",
+                amount: 5,
+                unit: "g",
+            },
+            {
+                name: "Curcuma",
+                amount: 10,
+                unit: "g",
+            },
+            {
+                name: "Bouillon",
+                amount: 1,
+                unit: "l",
+            },
+        ],
+        rapidity: rapidity.LONG,
+        preparation: ["Préparer les poivrons et les trancher", "Trancher les saucisses"],
+        steps: ["Mélanger poivrons, saucisses, petits pois avec le riz et les épices", "Ajouter le bouillon", "Enfourner une quanrantaine de minutes"],
     },
     {
         name: "Tagliatelles aux coques",
