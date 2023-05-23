@@ -1022,6 +1022,45 @@ const recipes = [
         steps: ["Mélanger coquillettes et petits pois dans une cocotte avec le bouillon", "Ajouter le fromage avec un peu d'huile au mélange", "Saler et poivrer"],
     },
     {
+        name: "Risotto de shitakés",
+        category: category.RICE,
+        ingredients: [
+            {
+                name: "Bouillon de légumes",
+                amount: 100,
+                unit: "cl",
+            },
+            {
+                name: "Sauce soja",
+                amount: 5,
+                unit: "cl",
+            },
+            {
+                name: "Riz",
+                amount: 300,
+                unit: "g",
+            },
+            {
+                name: "Shitakés",
+                amount: 20,
+                unit: "p",
+            },
+            {
+                name: "Ail",
+                amount: 4,
+                unit: "p",
+            },
+            {
+                name: "Ciboulette",
+                amount: 20,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Préparer l'ail, les champignons et les trancher"],
+        steps: ["Cuire l'ail dans une cocotte avec un peu d'huile", "Ajouter les champignons avec le bouillon", "Ajouter le riz avec la sauce soja et la ciboulette et réduire à feu doux", "Poivrer"],
+    },
+    {
         name: "Omelette à la pomme de terre",
         category: category.OMELETTE,
         ingredients: [
