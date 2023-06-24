@@ -50,6 +50,35 @@ const recipes = [
         steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalote"],
     },
     {
+        name: "Concombre à la feta",
+        category: category.SALAD,
+        ingredients: [
+            {
+                name: "Concombre",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Feta",
+                amount: 500,
+                unit: "g",
+            },
+            {
+                name: "Basilique",
+                amount: 5,
+                unit: "g",
+            },
+            {
+                name: "Olive verte",
+                amount: 250,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.FAST,
+        preparation: ["Préparer concombre et le trancher", "Trancher la feta, le basilique et les olives"],
+        steps: ["Mélanger le tout"],
+    },
+    {
         name: "Risotto de betterave",
         category: category.RICE,
         ingredients: [
