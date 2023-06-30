@@ -800,6 +800,30 @@ const recipes = [
         steps: ["Faire revenir l'oignon et les champignons à la poêle", "Ajouter l'échalote et le poireau à la poêle", "Ajouter la crème et mélanger", "Faire griller la galette et y ajoutant la fondue de poireaux"],
     },
     {
+        name: "Grenailles au parmesan",
+        category: category.GRATIN,
+        ingredients: [
+            {
+                name: "Grenailles",
+                amount: 20,
+                unit: "p",
+            },
+            {
+                name: "Persil",
+                amount: 50,
+                unit: "g",
+            },
+            {
+                name: "Parmesan",
+                amount: 25,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Préparer les grenailles"],
+        steps: ["Arroser d'huile d'olive et enfourner les grenailles une trentaine de minutes", "Ajouter parmesan et persil"],
+    },
+    {
         name: "Muffins aux tomates et aux olives",
         category: category.CAKE,
         ingredients: [
