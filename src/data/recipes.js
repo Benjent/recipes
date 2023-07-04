@@ -606,6 +606,35 @@ const recipes = [
         steps: ["Cuire les spaghettis", "Faire revenir les carottes et le gingembre à la poêle", "Ajouter la crème de coco aux carottes", "Mélanger le tout"],
     },
     {
+        name: "Gratin de haricots rouges",
+        category: category.GRATIN,
+        ingredients: [
+            {
+                name: "Haricots rouges",
+                amount: 1000,
+                unit: "g",
+            },
+            {
+                name: "Bûche de chèvre",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Coulis de tomate",
+                amount: 30,
+                unit: "cl",
+            },
+            {
+                name: "Ail",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: rapidity.MEDIUM,
+        preparation: ["Préparer l'ail", "Trancher la bûche"],
+        steps: ["Pré-chauffer le four", "Mélanger les haricots avec le coulis et l'ail", "Epicer, poivrer le mélange et déposer les tranches de chèvre", "Enfourner une trentaine de minutes"],
+    },
+    {
         name: "Spaghetti bolognaise",
         category: category.PASTA,
         ingredients: [
