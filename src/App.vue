@@ -10,10 +10,33 @@ import vegetables from "./data/vegetables"
 import Accordion from "./components/Accordion.vue"
 import Recipe from "./components/Recipe.vue"
 import Table from "./components/Table.vue"
+
+const DAYS_TO_COOK_FOR = 4
+const randomIndexes = Array(recipes.length).fill().map((_, index) => index + 1).sort(() => Math.random() - 0.5).slice(0, DAYS_TO_COOK_FOR)
+const weeklyPlanning = randomIndexes.map((i) => recipes[i])
+const groceries = weeklyPlanning.reduce((accumulator, current) => {
+    return [...accumulator, ...current.ingredients]
+}, [])
 </script>
 
 <template>
     <main class="app">
+        <h2 class="title--2">Pour la semaine</h2>
+        <section class="app__section">
+            <h3 class="title--3">Recettes</h3>
+            <ul class="app__item">
+                <li v-for="recipe in weeklyPlanning" :key="recipe.name">
+                    {{ recipe.name }}
+                </li>
+            </ul>
+            <h3 class="title--3">Courses</h3>
+            <ul>
+                <li v-for="ingredient in groceries" :key="ingredient.name">
+                    {{ ingredient.name }} ({{ ingredient.amount }}{{ ingredient.unit }})
+                </li>
+            </ul>
+        </section>
+
         <h2 class="title--2">Fruits et légumes</h2>
         <section class="app__section">
             <Accordion title="Tableau des saisons">
@@ -84,7 +107,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss">
 @import './assets/styles/basics/reset.scss';
 @import './assets/styles/basics/breakpoints.scss';
@@ -130,6 +152,10 @@ body {
                 width: 100%;
             }
         }
+    }
+
+    &__item {
+        margin-bottom: 20px;
     }
 
     &__category {
