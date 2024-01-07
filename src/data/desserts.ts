@@ -1,8 +1,9 @@
-import { rapidity } from "../types"
+import { Category, Rapidity, Recipe } from "../types"
 
-const desserts = [
+const desserts: Recipe[] = [
     {
         name: "Bananes flambées",
+        category: Category.DESSERT,
         ingredients: [
             {
                 name: "Banane",
@@ -15,7 +16,7 @@ const desserts = [
                 unit: "cl"
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Eplucher et couper les bananes"],
         steps: ["Faire revenir les bananes à la poêle avec beurre et sucre", "Ajouter du rhum et le faire flamber"],
     },

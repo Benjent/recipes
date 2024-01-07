@@ -1,5 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import Ingredient from "./Ingredient.vue"
+import { Recipe } from "../types"
+
+const props = defineProps<{
+    recipe: Recipe,
+}>()
 </script>
 
 <template>
@@ -30,20 +35,6 @@ import Ingredient from "./Ingredient.vue"
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    components: {
-        Ingredient,
-    },
-    props: {
-        recipe: {
-            type: Object,
-            required: true,
-        },
-    },
-}
-</script>
 
 <style lang="scss">
 @import '../assets/styles/basics/breakpoints.scss';
