@@ -7,7 +7,6 @@ const recipes = [
     // Taboulé : 200g de semoule fine (cuire semoule avant...), équivalent d'eau bouillante (bouilloire), verser dans un plat avec raisins secs et tomates cerises, attendre 10 minute couvercle)
     // Penne bolo lentlle
     // burito riz pesto rosso
-    // enchiladas
     // Riz froid radis fromage
     // Hachis parmentier de kefta (pomme de terre, carotte)
     // Cake à la pomme de terre (+ emmental)
@@ -1297,6 +1296,65 @@ const recipes = [
         rapidity: rapidity.LONG,
         preparation: ["Préparer les poivrons et les trancher", "Trancher les saucisses"],
         steps: ["Mélanger poivrons, saucisses, petits pois avec le riz et les épices", "Ajouter le bouillon", "Enfourner une quanrantaine de minutes"],
+    },
+    {
+        name: "Enchiladas",
+        category: category.GRATIN,
+        ingredients: [
+            {
+                name: "Sauce tomate",
+                amount: 350,
+                unit: "g",
+            },
+            {
+                name: "Haricot rouge",
+                amount: 350,
+                unit: "g",
+            },
+            {
+                name: "Oignon rouge",
+                amount: 2,
+                unit: "p",
+            },
+            {
+                name: "Pomme de terre",
+                amount: 12,
+                unit: "p",
+            },
+            {
+                name: "Emmental",
+                amount: 50,
+                unit: "g",
+            },
+            {
+                name: "Galette de blé",
+                amount: 6,
+                unit: "p",
+            },
+            {
+                name: "Cumin",
+                amount: 10,
+                unit: "g",
+            },
+            {
+                name: "Paprika",
+                amount: 10,
+                unit: "g",
+            },
+            {
+                name: "Piment",
+                amount: 10,
+                unit: "g",
+            },
+            {
+                name: "Guacamole",
+                amount: 25,
+                unit: "g",
+            },
+        ],
+        rapidity: rapidity.LONG,
+        preparation: ["Préparer les oignons, les pommes de terre et les trancher"],
+        steps: ["Pré-cuire les oignons avec les pommes de terre une trentaine de minutes au four avec un filet d'huile et les épices", "Répandre la sauce tomate dans un plat avec sel et poivre", "Répartir les oignons, pommes de terre et haricots dans les galettes avec un peu d'emmental", "Rouler et déposer les galettes dans le plat de sauce tomate", "Recouvrir les rouleaux d'emmental", "Enfourner une dizaine de minutes", "Ajouter du guacamole"],
     },
     {
         name: "Tagliatelles aux coques",
