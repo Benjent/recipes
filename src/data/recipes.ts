@@ -1,4 +1,4 @@
-import { rapidity, category } from "../types"
+import { Category, Rapidity } from "../types"
 
 const recipes = [
     // TODO ajouter recettes below
@@ -13,7 +13,7 @@ const recipes = [
     // Pancakes
     {
         name: "Oeufs brouillés",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Oeuf",
@@ -21,12 +21,12 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         steps: ["Brouiller les oeufs", "Epicer"],
     },
     {
         name: "Salade à la vinaigrette moutardée",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Laitue",
@@ -44,13 +44,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Laver la salade", "Préparer l'échalote et la trancher"],
         steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Ajouter sel et l'échalote"],
     },
     {
         name: "Concombre à la feta",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Concombre",
@@ -73,13 +73,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Préparer concombre et le trancher", "Trancher la feta, le basilique et les olives"],
         steps: ["Mélanger le tout"],
     },
     {
         name: "Risotto de betterave",
-        category: category.RICE,
+        category: Category.RICE,
         ingredients: [
             {
                 name: "Bouillon de légumes",
@@ -107,13 +107,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Trancher les betteraves"],
         steps: ["Mélanger betteraves et riz dans une cocotte avec le bouillon", "Ajouter le fromage et épicer", "Saler et poivrer"],
     },
     {
         name: "Gratin de tortellinis",
-        category: category.GRATIN,
+        category: Category.GRATIN,
         ingredients: [
             {
                 name: "Tortellinis",
@@ -126,12 +126,12 @@ const recipes = [
                 unit: "cl",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         steps: ["Baigner les tortellinis dans un plat avec le gaspacho", "Ajouter poivre et herbes", "Enfourner une quarantaine de minutes"],
     },
     {
         name: "Butternut rôti",
-        category: category.VEGETABLE,
+        category: Category.VEGETABLE,
         ingredients: [
             {
                 name: "Butternut",
@@ -139,13 +139,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Préparer le butternut et le trancher"],
         steps: ["Huiler les tranches, saler, poivrer", "Enfourner une quarantaine de minutes"],
     },
     {
         name: "Tomates feta",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Tomate",
@@ -168,13 +168,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Préparer la tomate et la trancher", "Trancher la feta", "Couper l'ail"],
         steps: ["Mélanger moutarde, huile, ail, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Poivrer"],
     },
     {
         name: "Betterave feta",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Betterave",
@@ -192,13 +192,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Trancher la betterave", "Trancher la feta"],
         steps: ["Mélanger moutarde, huile, un peu d'eau et ajouter le vinaigre pour obtenir un mélange homogène", "Poivrer"],
     },
     {
         name: "Rouleau de betterave",
-        category: category.WRAP,
+        category: Category.WRAP,
         ingredients: [
             {
                 name: "Mâche",
@@ -226,13 +226,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Laver la salade", "Préparer la betterave et la trancher", "Trancher le comté", "Émietter la noix"],
         steps: ["Mouiller la galette", "Disposer sur le diamètre de la galette les tranches de betterave et de comté", "Ajouter une feuille de salade, un filer d'huile et les miettes de noix", "Rouler la galette"],
     },
     {
         name: "Salade de thon",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Laitue",
@@ -255,13 +255,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Laver la salade", "Trancher le thon et le roquefort"],
         steps: ["Mélanger le thon, le roquefort et le maïs avec la salade"],
     },
     {
         name: "Burger",
-        category: category.BURGER,
+        category: Category.BURGER,
         ingredients: [
             {
                 name: "Pain burger",
@@ -279,7 +279,7 @@ const recipes = [
                 unit: "p",
             },
             {
-                name: category.SALAD,
+                name: Category.SALAD,
                 amount: 1,
                 unit: "p",
             },
@@ -309,13 +309,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Laver la salade", "Préparer l'oignon, les champignons et les trancher", "Trancher la tomme, la tomate et arracher une feuille de salade"],
         steps: ["Faire revenir les champignons à la poêle", "Cuire l'oeuf à la poêle et y ajouter du poivre", "Griller les pains au grille-pain", "Assembler moutarde, champignon, salade, fromage, tomate, oignon, oeuf et ketchup dans les pains"],
     },
     {
         name: "Riz à la sauce curry",
-        category: category.DAHL,
+        category: Category.DAHL,
         ingredients: [
             {
                 name: "Riz",
@@ -328,13 +328,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: [],
         steps: ["Cuire le riz", "Disposer le riz avec la sauce curry"],
     },
     {
         name: "Riz aux légumes",
-        category: category.DAHL,
+        category: Category.DAHL,
         ingredients: [
             {
                 name: "Riz",
@@ -352,13 +352,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: [],
         steps: ["Cuire le riz", "Disposer le riz, la sauce curry et les petits pois"],
     },
     {
         name: "Quinoa à la pastèque",
-        category: category.TABBOULEH,
+        category: Category.TABBOULEH,
         ingredients: [
             {
                 name: "Quinoa",
@@ -376,13 +376,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Trancher la pastèque en dés", "Couper la menthe"],
         steps: ["Cuire le quinoa", "Mélanger la pastèque et la menthe avec le quinoa et laisser refroidir"],
     },
     {
         name: "Fajita au maïs",
-        category: category.WRAP,
+        category: Category.WRAP,
         ingredients: [
             {
                 name: "Tomate cerise",
@@ -405,13 +405,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Préparer les tomates et les trancher"],
         steps: ["Pré-chauffer les galettes au micro-ondes", "Disposer les tomates, le maïs et l'emmental dans la galette et la rouler"],
     },
     {
         name: "Omelette aux tomates cerise",
-        category: category.OMELETTE,
+        category: Category.OMELETTE,
         ingredients: [
             {
                 name: "Oeuf",
@@ -429,13 +429,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Laver les tomates et les trancher"],
         steps: ["Mélanger les oeufs", "Ajouter les tomates et la ciboulette, saler, poivrer", "Cuire le mélange à la poêle"],
     },
     {
         name: "Salade de pois chiches",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Roquette",
@@ -463,13 +463,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         preparation: ["Laver la salade", "Préparer l'oignon et le trancher", "Rincer les pois chiche"],
         steps: ["Mélanger dans un saladier salade, pois chiche, oignon", "Ajouter cumin, huile d'olive et presser l'orange sur le mélange"],
     },
     {
         name: "Riz à la sauce tomate",
-        category: category.RICE,
+        category: Category.RICE,
         ingredients: [
             {
                 name: "Riz",
@@ -487,12 +487,12 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         steps: ["Cuire le riz", "Chauffer la sauce tomate", "Mélanger le tout avec la noix de cajou et poivrer"],
     },
     {
         name: "Galette saucisse",
-        category: category.GALETTE,
+        category: Category.GALETTE,
         ingredients: [
             {
                 name: "Galette de sarrasin",
@@ -510,12 +510,12 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         steps: ["Pré-cuire la saucisse à la poêle", "Cuire la galette à la poêle avec la saucisse et la moutarde"],
     },
     {
         name: "Galette oeuf fromage",
-        category: category.GALETTE,
+        category: Category.GALETTE,
         ingredients: [
             {
                 name: "Galette de sarrasin",
@@ -533,12 +533,12 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.FAST,
+        rapidity: Rapidity.FAST,
         steps: ["Cuire la galette à la poêle avec l'oeuf et le fromage"],
     },
     {
         name: "Fajita",
-        category: category.WRAP,
+        category: Category.WRAP,
         ingredients: [
             {
                 name: "Falafel",
@@ -571,13 +571,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer l'oignon, les champignons et les carottes et les trancher", "Émietter les falafels"],
         steps: ["Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Ajouter les falafels à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes", "Disposer le mélange dans la galette et la rouler"],
     },
     {
         name: "Spaghetti coco",
-        category: category.PASTA,
+        category: Category.PASTA,
         ingredients: [
             {
                 name: "Spaghetti",
@@ -600,13 +600,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer et râper le gingembre et les carottes"],
         steps: ["Cuire les spaghettis", "Faire revenir les carottes et le gingembre à la poêle", "Ajouter la crème de coco aux carottes", "Mélanger le tout"],
     },
     {
         name: "Gratin de haricots rouges",
-        category: category.GRATIN,
+        category: Category.GRATIN,
         ingredients: [
             {
                 name: "Haricots rouges",
@@ -629,13 +629,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer l'ail", "Trancher la bûche"],
         steps: ["Pré-chauffer le four", "Mélanger les haricots avec le coulis et l'ail", "Epicer, poivrer le mélange et déposer les tranches de chèvre", "Enfourner une trentaine de minutes"],
     },
     {
         name: "Spaghetti bolognaise",
-        category: category.PASTA,
+        category: Category.PASTA,
         ingredients: [
             {
                 name: "Spaghetti",
@@ -668,13 +668,13 @@ const recipes = [
                 unit: "cl",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer ail et gingembre"],
         steps: ["Faire revenir l'ail et le gingembre avec les falafels à la poêle", "Ajouter le vin", "Ajouter la sauce tomate et mélanger", "Cuire les spaghettis", "Mélanger le tout"],
     },
     {
         name: "Salade de lentilles",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Lentilles",
@@ -702,13 +702,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Laver la salade, les radis et les myrtilles", "Trancher les radis et la feta"],
         steps: ["Cuire les lentilles", "Mélanger la salade, la feta, les radis et les myrtilles avec les lentilles"],
     },
     {
         name: "Pizza aux champignons base crème",
-        category: category.PIZZA,
+        category: Category.PIZZA,
         ingredients: [
             {
                 name: "Pâte à pizza",
@@ -731,13 +731,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer les champignons et les trancher", "Dérouler la pâte et répandre le yaourt et les champignons"],
         steps: ["Arroser d'huile la pizza", "Répandre l'emmental", "Enfourner la pizza une trentaine de minutes"],
     },
     {
         name: "Salade de pâtes au fenouil",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Pâtes",
@@ -755,13 +755,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Laver ler fenouil et le trancher"],
         steps: ["Pré-cuire les pâtes dans une casserole", "Mélanger les pâtes froides avec le fenouil et la tapenade"],
     },
     {
         name: "Ravioles au bleu",
-        category: category.PASTA,
+        category: Category.PASTA,
         ingredients: [
             {
                 name: "Ravioles",
@@ -784,13 +784,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Couper la ciboulette et le fromage", "Émietter les noix"],
         steps: ["Cuire les ravioles", "Ajouter les ravioles dans la poêle avec le bleu", "Disposer la noix et la ciboulette"],
     },
     {
         name: "Galette de fondue de poireaux",
-        category: category.GALETTE,
+        category: Category.GALETTE,
         ingredients: [
             {
                 name: "Galette de sarrasin",
@@ -823,13 +823,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer l'oignon, l'échalote, les champignons et le poireau et les trancher"],
         steps: ["Faire revenir l'oignon et les champignons à la poêle", "Ajouter l'échalote et le poireau à la poêle", "Ajouter la crème et mélanger", "Faire griller la galette et y ajoutant la fondue de poireaux"],
     },
     {
         name: "Grenailles au parmesan",
-        category: category.GRATIN,
+        category: Category.GRATIN,
         ingredients: [
             {
                 name: "Grenailles",
@@ -847,13 +847,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer les grenailles"],
         steps: ["Arroser d'huile d'olive et enfourner les grenailles une trentaine de minutes", "Ajouter parmesan et persil"],
     },
     {
         name: "Muffins aux tomates et aux olives",
-        category: category.CAKE,
+        category: Category.CAKE,
         ingredients: [
             {
                 name: "Oeuf",
@@ -876,13 +876,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer la tomate et la trancher"],
         steps: ["Mélanger les oeufs avec la farine et la levure", "Ajouter la tomate", "Epicer, poivrer et saler", "Verser le mélange dans des moules", "Cuire au four"],
     },
     {
         name: "Gnocchi à la crème",
-        category: category.PASTA,
+        category: Category.PASTA,
         ingredients: [
             {
                 name: "Gnocchi",
@@ -900,13 +900,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer les champignons et les trancher"],
         steps: ["Faire revenir les gnocchis dans du beurre à la poêle", "Retirer les gnocchis et faire revenir la crème et les champignons à la poêle"],
     },
     {
         name: "Champignons farcis",
-        category: category.STUFFED,
+        category: Category.STUFFED,
         ingredients: [
             {
                 name: "Champignon",
@@ -919,13 +919,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer les champignons et retirer leur pied"],
         steps: ["Farcir les champignons de crème et ajouter des épices", "Cuir les champignons au four"]
     },
     {
         name: "Tarte aux épinards",
-        category: category.PIE,
+        category: Category.PIE,
         ingredients: [
             {
                 name: "Pâte feuilletée",
@@ -958,13 +958,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Trouer la pâte feuilletée", "Préparer les épinards"],
         steps: ["Précuire la pâte au four", "Cuire les épinards", "Mélanger l'oeuf avec la crème et la noix de muscade", "Disposer les épinards et le chèvre sur la tarte et y verser le mélange", "Cuire la tarte"]
     },
     {
         name: "Pissaladière aux oignons",
-        category: category.PIE,
+        category: Category.PIE,
         ingredients: [
             {
                 name: "Pâte feuilletée",
@@ -982,13 +982,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Trouer la pâte feuilletée", "Préparer les oignons et les trancher"],
         steps: ["Précuire la pâte au four", "Faire revenir les oignons avec curry et muscade", "Disposer les oignons sur la tarte", "Cuire la tarte"]
     },
     {
         name: "Salade césar",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Salade",
@@ -1031,13 +1031,13 @@ const recipes = [
                 unit: "p",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Laver la salade", "Couper les tomates cerises en deux", "Préparer l'ail et l'écraser"],
         steps: ["Faire revenir le tofu à la poêle", "Remuer l'oeuf avec la mayonnaise, l'huile, le jus de citron et du poivre", "Remuer la salade avec les tomates, l'ail, le tofu et le mélange"],
     },
     {
         name: "Salade d'endive",
-        category: category.SALAD,
+        category: Category.SALAD,
         ingredients: [
             {
                 name: "Endive",
@@ -1070,13 +1070,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Laver la salade", "Préparer et trancher les pommes, le concombre, les tomates, la carotte et le comté"],
         steps: ["Mélanger le tout"],
     },
     {
         name: "Risotto de coquillettes",
-        category: category.PASTA,
+        category: Category.PASTA,
         ingredients: [
             {
                 name: "Bouillon de légumes",
@@ -1099,12 +1099,12 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         steps: ["Mélanger coquillettes et petits pois dans une cocotte avec le bouillon", "Ajouter le fromage avec un peu d'huile au mélange", "Saler et poivrer"],
     },
     {
         name: "Risotto de shitakés",
-        category: category.RICE,
+        category: Category.RICE,
         ingredients: [
             {
                 name: "Bouillon de légumes",
@@ -1137,13 +1137,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer l'ail, les champignons et les trancher"],
         steps: ["Cuire l'ail dans une cocotte avec un peu d'huile", "Ajouter les champignons avec le bouillon", "Ajouter le riz avec la sauce soja et la ciboulette et réduire à feu doux", "Poivrer"],
     },
     {
         name: "Omelette à la pomme de terre",
-        category: category.OMELETTE,
+        category: Category.OMELETTE,
         ingredients: [
             {
                 name: "Oeuf",
@@ -1161,13 +1161,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.MEDIUM,
+        rapidity: Rapidity.MEDIUM,
         preparation: ["Préparer les pommes de terre et les trancher"],
         steps: ["Faire revenir les pommes de terre à la poêle et les épicer", "Remuer les oeufs avec la ciboulette", "Cuire le mélange à la poêle"],
     },
     {
         name: "Dahl de lentilles de corail",
-        category: category.DAHL,
+        category: Category.DAHL,
         ingredients: [
             {
                 name: "Lentilles de corail",
@@ -1205,13 +1205,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.LONG,
+        rapidity: Rapidity.LONG,
         preparation: ["Préparer l'oignon, l'ail, le gingembre et les trancher"],
         steps: ["Faire cuire l'oignon dans l'huile de coco", "Ajouter l'ail et le gingembre, épicer et mélanger", "Ajouter les lentilles de corail et mélanger", "Ajouter la pulpe de tomate avec de l'eau et mélanger", "Ajouter le lait de coco et mélanger", "Ajouter de la coriandre"],
     },
     {
         name: "Risotto",
-        category: category.RICE,
+        category: Category.RICE,
         ingredients: [
             {
                 name: "Riz",
@@ -1249,13 +1249,13 @@ const recipes = [
                 unit: "l",
             },
         ],
-        rapidity: rapidity.LONG,
+        rapidity: Rapidity.LONG,
         preparation: ["Préparer les champignons, l'oignon, l'ail et les trancher"],
         steps: ["Faire revenir l'ail et l'oignon à la poêle", "Ajouter les champignons à la poêle", "Ajouter le riz avec le vin blanc", "Ajouter régulièrement le bouillon jusqu'à épuisement", "Ajouter le parmesan"],
     },
     {
         name: "Paëlla",
-        category: category.RICE,
+        category: Category.RICE,
         ingredients: [
             {
                 name: "Riz",
@@ -1293,13 +1293,13 @@ const recipes = [
                 unit: "l",
             },
         ],
-        rapidity: rapidity.LONG,
+        rapidity: Rapidity.LONG,
         preparation: ["Préparer les poivrons et les trancher", "Trancher les saucisses"],
         steps: ["Mélanger poivrons, saucisses, petits pois avec le riz et les épices", "Ajouter le bouillon", "Enfourner une quanrantaine de minutes"],
     },
     {
         name: "Enchiladas",
-        category: category.GRATIN,
+        category: Category.GRATIN,
         ingredients: [
             {
                 name: "Sauce tomate",
@@ -1352,13 +1352,13 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.LONG,
+        rapidity: Rapidity.LONG,
         preparation: ["Préparer les oignons, les pommes de terre et les trancher"],
         steps: ["Pré-cuire les oignons avec les pommes de terre une trentaine de minutes au four avec un filet d'huile et les épices", "Répandre la sauce tomate dans un plat avec sel et poivre", "Répartir les oignons, pommes de terre et haricots dans les galettes avec un peu d'emmental", "Rouler et déposer les galettes dans le plat de sauce tomate", "Recouvrir les rouleaux d'emmental", "Enfourner une dizaine de minutes", "Ajouter du guacamole"],
     },
     {
         name: "Tagliatelles aux coques",
-        category: category.PASTA,
+        category: Category.PASTA,
         ingredients: [
             {
                 name: "Coques",
@@ -1386,7 +1386,7 @@ const recipes = [
                 unit: "g",
             },
         ],
-        rapidity: rapidity.LONG,
+        rapidity: Rapidity.LONG,
         preparation: ["Préparer les coques", "Préparer l'oignon et le trancher"],
         steps: ["Faire bouillir l'eau avec l'oignon et le vin blanc", "Verser les coques dans l'eau", "Cuire les tagliatelles", "Mélanger les coques et les tagliatelles avec la crème"],
     },

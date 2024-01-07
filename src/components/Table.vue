@@ -1,6 +1,45 @@
-<script setup>
+<script setup lang="ts">
+import { computed, inject } from "vue"
+import { Edible, Month } from "../types"
 import months from "../data/months"
-import formatting from "../utils/formatting"
+import { shortenMonthName } from "../utils/formatting"
+
+const mq = inject("mq")
+const props = defineProps<{
+    edibles: Edible[],
+}>()
+
+const currentMonth = new Date().getMonth() + 1 as Month
+const edibleColSpan = 4
+
+const currentMonthEdibles = computed(() => {
+    return props.edibles.filter((e) => e.months.includes(currentMonth))
+})
+
+function getMonthName(month: Month) {
+    const mapper = {
+        1: "janvier",
+        2: "février",
+        3: "mars",
+        4: "avril",
+        5: "mai",
+        6: "juin",
+        7: "juillet",
+        8: "août",
+        9: "septembre",
+        10: "octobre",
+        11: "novembre",
+        12: "décembre",
+    }
+    return shortenMonthName(mapper[month], mq.current)
+}
+
+function getEdiblePeriod(edible: Edible) {
+    const start = [4, 8, 10].includes(edible.months[0]) ? "d'": "de "
+    const from = getMonthName(edible.months[0])
+    const to = getMonthName(edible.months[edible.months.length - 1])
+    return `${start}${from} à ${to}`
+}
 </script>
 
 <template>
@@ -35,54 +74,6 @@ import formatting from "../utils/formatting"
         </template>
     </table>
 </template>
-
-<script>
-export default {
-    inject: ["mq"],
-    props: {
-        edibles: {
-            type: Array,
-            required: true,
-        },
-    },
-    data() {
-        return {
-            currentMonth: new Date().getMonth() + 1,
-            edibleColSpan: 4,
-        }
-    },
-    computed: {
-        currentMonthEdibles() {
-            return this.edibles.filter((e) => e.months.includes(this.currentMonth))
-        },
-    },
-    methods: {
-        getMonthName(month) {
-            const mapper = {
-                1: "janvier",
-                2: "février",
-                3: "mars",
-                4: "avril",
-                5: "mai",
-                6: "juin",
-                7: "juillet",
-                8: "août",
-                9: "septembre",
-                10: "octobre",
-                11: "novembre",
-                12: "décembre",
-            }
-            return formatting.shortenMonthName(mapper[month], this.mq.current)
-        },
-        getEdiblePeriod(edible) {
-            const start = [4, 8, 10].includes(edible.months[0]) ? "d'": "de "
-            const from = this.getMonthName(edible.months[0])
-            const to = this.getMonthName(edible.months[edible.months.length - 1])
-            return `${start}${from} à ${to}`
-        }
-    },
-}
-</script>
 
 <style lang="scss">
 .table {

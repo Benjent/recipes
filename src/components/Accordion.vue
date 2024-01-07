@@ -1,27 +1,21 @@
+<script setup lang="ts">
+import { ref } from "vue"
+
+const props = defineProps<{
+    title: string,
+}>()
+
+const isOpen = ref(false)
+</script>
+
 <template>
     <div class="accordion">
-        <h3 :class="['title--3', 'accordion__title', { 'accordion__title--open': isOpen }]" @click="isOpen = !isOpen">{{title}}</h3>
+        <h3 :class="['title--3', 'accordion__title', { 'accordion__title--open': isOpen }]" @click="isOpen = !isOpen">{{props.title}}</h3>
         <div v-if="isOpen" class="accordion__body">
             <slot></slot>
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    props: {
-        title: {
-            type: String,
-            required: true,
-        },
-    },
-    data() {
-        return {
-            isOpen: false,
-        }
-    },
-}
-</script>
 
 <style lang="scss">
 .accordion {

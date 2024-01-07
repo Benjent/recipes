@@ -1,5 +1,7 @@
-<script setup>
-import { category } from "./types"
+<script setup lang="ts">
+import { inject } from "vue"
+import { Category } from "./types"
+import { getRandomNumbers } from "./utils/array"
 import categoryEmoji from "./assets/emojis/category"
 import appetizers from "./data/appetizers"
 import desserts from "./data/desserts"
@@ -11,8 +13,12 @@ import Accordion from "./components/Accordion.vue"
 import Recipe from "./components/Recipe.vue"
 import Table from "./components/Table.vue"
 
+const mq = inject("mq")
+
+const categories = Object.entries(Category).filter((category) => ![Category.CANAPE, Category.PIE, Category.SNACK, Category.SPREAD].includes(category[1]))
+
 const DAYS_TO_COOK_FOR = 4
-const randomIndexes = Array(recipes.length).fill().map((_, index) => index + 1).sort(() => Math.random() - 0.5).slice(0, DAYS_TO_COOK_FOR)
+const randomIndexes = getRandomNumbers(recipes.length).slice(0, DAYS_TO_COOK_FOR)
 const weeklyPlanning = randomIndexes.map((i) => recipes[i])
 const groceries = weeklyPlanning.reduce((accumulator, current) => {
     return [...accumulator, ...current.ingredients]
@@ -51,7 +57,7 @@ const groceries = weeklyPlanning.reduce((accumulator, current) => {
 
         <h2 class="title--2">Recettes</h2>
         <section class="app__section">
-            <div v-for="category in Object.entries(category)" :key="category[0]" class="app__category">
+            <div v-for="category in categories" :key="category[0]" class="app__category">
                 <h3 class="title title--3">{{categoryEmoji[category[1]]}} {{category[1]}}</h3>
                 <ul>
                     <li v-for="recipe in recipes.filter((r) => r.category === category[1])" :key="recipe.name">
@@ -95,17 +101,6 @@ const groceries = weeklyPlanning.reduce((accumulator, current) => {
         </section>
     </main>
 </template>
-
-<script>
-export default {
-    inject: ["mq"],
-    components: {
-        Accordion,
-        Recipe,
-        Table,
-    },
-}
-</script>
 
 <style lang="scss">
 @import './assets/styles/basics/reset.scss';

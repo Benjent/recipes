@@ -1,4 +1,6 @@
-const shortenMonthName = (value, mq) => {
+import { Breakpoint } from "../types"
+
+export function shortenMonthName(value: string, mq: Breakpoint) {
     const mapper = {
         xs: 10,
         sm: 1,
@@ -9,8 +11,4 @@ const shortenMonthName = (value, mq) => {
         return value.slice(0, 1)
     }
     return value.length <= mapper[mq] ? value : `${value.slice(0, 3)}.`
-}
-
-export default {
-    shortenMonthName,
 }

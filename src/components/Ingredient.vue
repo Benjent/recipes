@@ -1,20 +1,17 @@
+<script setup lang="ts">
+import { Ingredient } from '../types'
+
+const props = defineProps<{
+    ingredient: Ingredient,
+}>()
+</script>
+
 <template>
     <dl class="ingredient">
-        <dt>{{ingredient.name}}</dt>
-        <dd>&nbsp;({{ingredient.amount}}{{ingredient.unit !== "p" ? ingredient.unit : ""}})</dd>
+        <dt>{{props.ingredient.name}}</dt>
+        <dd>&nbsp;({{props.ingredient.amount}}{{props.ingredient.unit !== "p" ? props.ingredient.unit : ""}})</dd>
     </dl>
 </template>
-
-<script>
-export default {
-    props: {
-        ingredient: {
-            type: Object,
-            required: true,
-        },
-    },
-}
-</script>
 
 <style lang="scss">
 .ingredient {

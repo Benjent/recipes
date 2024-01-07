@@ -1,6 +1,7 @@
-import sorting from "../utils/sorting"
+import { Edible } from "../types"
+import { sortByName } from "../utils/array"
 
-let fruits = [
+let fruits: Edible[] = [
     {
         name: "Abricot",
         months: [6, 7, 8],
@@ -228,6 +229,6 @@ let fruits = [
     },
 ]
 
-fruits = sorting.sortByName(fruits)
+fruits = sortByName(fruits)
 
 export default fruits
