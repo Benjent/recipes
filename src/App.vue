@@ -15,7 +15,7 @@ import Table from "./components/Table.vue"
 
 const mq = inject("mq")
 
-const categories = Object.entries(Category).filter((category) => ![Category.CANAPE, Category.PIE, Category.SNACK, Category.SPREAD].includes(category[1]))
+const categories = Object.entries(Category).filter((category) => ![Category.CANAPE, Category.SNACK, Category.SPREAD].includes(category[1]))
 
 const DAYS_TO_COOK_FOR = 4
 const randomIndexes = getRandomNumbers(recipes.length).slice(0, DAYS_TO_COOK_FOR)
