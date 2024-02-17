@@ -260,6 +260,20 @@ const recipes = [
         steps: ["Mélanger le thon, le roquefort et le maïs avec la salade"],
     },
     {
+        name: "Pommes de terre sautées",
+        category: Category.VEGETABLE,
+        ingredients: [
+            {
+                name: "Pomme de terre",
+                amount: 10,
+                unit: "p",
+            },
+        ],
+        rapidity: Rapidity.FAST,
+        preparation: ["Préparer les pommes de terre et les trancher", "Huiler le plat"],
+        steps: ["Verser les pommes de terre dans le plat huilé et les épicer"],
+    },
+    {
         name: "Burger",
         category: Category.BURGER,
         ingredients: [
