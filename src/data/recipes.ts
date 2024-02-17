@@ -347,6 +347,40 @@ const recipes = [
         steps: ["Cuire le riz", "Disposer le riz avec la sauce curry"],
     },
     {
+        name: "Wrap frais",
+        category: Category.WRAP,
+        ingredients: [
+            {
+                name: "Galette de blé",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Avocat",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Carotte",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Olive noire",
+                amount: 5,
+                unit: "p",
+            },
+            {
+                name: "Tofu",
+                amount: 250,
+                unit: "g",
+            },
+        ],
+        rapidity: Rapidity.FAST,
+        preparation: ["Râper la carotte", "Trancher les olives"],
+        steps: ["Poêler le tofu", "Disposer le tofu, l'avocat, la carotte et les olives dans la galette"],
+    },
+    {
         name: "Riz aux légumes",
         category: Category.DAHL,
         ingredients: [
