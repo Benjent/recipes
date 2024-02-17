@@ -271,7 +271,7 @@ const recipes = [
         ],
         rapidity: Rapidity.FAST,
         preparation: ["Préparer les pommes de terre et les trancher", "Huiler le plat"],
-        steps: ["Verser les pommes de terre dans le plat huilé et les épicer"],
+        steps: ["Verser les pommes de terre dans le plat huilé", "Saler, poivrer et épicer"],
     },
     {
         name: "Burger",
