@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { inject } from "vue"
+import { inject, onBeforeMount, ref } from "vue"
 import { Category } from "./types"
 import { getRandomNumbers } from "./utils/array"
 import categoryEmoji from "./assets/emojis/category"
@@ -17,30 +17,45 @@ const mq = inject("mq")
 
 const categories = Object.entries(Category).filter((category) => ![Category.CANAPE, Category.SNACK, Category.SPREAD].includes(category[1]))
 
-const DAYS_TO_COOK_FOR = 4
-const randomIndexes = getRandomNumbers(recipes.length).slice(0, DAYS_TO_COOK_FOR)
-const weeklyPlanning = randomIndexes.map((i) => recipes[i])
-const groceries = weeklyPlanning.reduce((accumulator, current) => {
-    return [...accumulator, ...current.ingredients]
-}, [])
+const weeklyPlanning = ref([])
+const groceries = ref([])
+
+const generateWeeklyPlanning = () => {
+    const DAYS_TO_COOK_FOR = 4
+    weeklyPlanning.value = []
+    groceries.value = []
+    const randomIndexes = getRandomNumbers(recipes.length).slice(0, DAYS_TO_COOK_FOR)
+    weeklyPlanning.value = randomIndexes.map((i) => recipes[i])
+    groceries.value = weeklyPlanning.value.reduce((accumulator, current) => {
+        return [...accumulator, ...current.ingredients]
+    }, [])
+}
+
+onBeforeMount(() => generateWeeklyPlanning())
 </script>
 
 <template>
     <main class="app">
-        <h2 class="title--2">Pour la semaine</h2>
+        <h2 class="title--2">Planning</h2>
         <section class="app__section">
-            <h3 class="title--3">Recettes</h3>
-            <ul class="app__item">
-                <li v-for="recipe in weeklyPlanning" :key="recipe.name">
-                    {{ recipe.name }}
-                </li>
-            </ul>
-            <h3 class="title--3">Courses</h3>
-            <ul>
-                <li v-for="ingredient in groceries" :key="ingredient.name">
-                    {{ ingredient.name }} ({{ ingredient.amount }}{{ ingredient.unit }})
-                </li>
-            </ul>
+            <Accordion title="Pour la semaine">
+                
+                <h3 class="title--3 app__section__header">
+                    Recettes
+                    <button class="button" @click="generateWeeklyPlanning">Regénérer le planning</button>
+                </h3>
+                <ul class="app__item">
+                    <li v-for="recipe in weeklyPlanning" :key="recipe.name">
+                        {{ recipe.name }}
+                    </li>
+                </ul>
+                <h3 class="title--3">Courses</h3>
+                <ul>
+                    <li v-for="ingredient in groceries" :key="ingredient.name">
+                        {{ ingredient.name }} ({{ ingredient.amount }}{{ ingredient.unit }})
+                    </li>
+                </ul>
+            </Accordion>
         </section>
 
         <h2 class="title--2">Fruits et légumes</h2>
@@ -106,6 +121,7 @@ const groceries = weeklyPlanning.reduce((accumulator, current) => {
 @import './assets/styles/basics/reset.scss';
 @import './assets/styles/basics/breakpoints.scss';
 @import './assets/styles/basics/colors.scss';
+@import './assets/styles/modules/button.scss';
 @import './assets/styles/modules/title.scss';
 
 body {
@@ -146,6 +162,12 @@ body {
                 display: inline-block;
                 width: 100%;
             }
+        }
+
+        &__header {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
         }
     }
 

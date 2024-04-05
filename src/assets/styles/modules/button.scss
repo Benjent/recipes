@@ -1,0 +1,9 @@
+.button {
+    color: lightcoral;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
