@@ -12,6 +12,7 @@ export enum Category {
     DESSERT = "Dessert",
     GALETTE = "Galette",
     GRATIN = "Gratin",
+    MASH = "Purée",
     OMELETTE = "Omelette",
     PASTA = "Pâtes",
     PIE = "Tarte",

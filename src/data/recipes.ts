@@ -837,6 +837,35 @@ const recipes = [
         steps: ["Cuire les ravioles", "Ajouter les ravioles dans la poêle avec le bleu", "Disposer la noix et la ciboulette"],
     },
     {
+        name: "Houmous de pommes de terre",
+        category: Category.MASH,
+        ingredients: [
+            {
+                name: "Pommes de terre",
+                amount: 6,
+                unit: "p",
+            },
+            {
+                name: "Champignons",
+                amount: 12,
+                unit: "p",
+            },
+            {
+                name: "Pois chiche",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Tahin",
+                amount: 100,
+                unit: "g",
+            },
+        ],
+        rapidity: Rapidity.MEDIUM,
+        preparation: ["Préparer les pommes de terre et les champignons et les trancher"],
+        steps: ["Cuire les pommes de terre avec le jus de pois chiche", "Mixer pois chiche et pommes de terre avec du tahin, de l'ail et un peu d'eau de cuisson", "Cuire les champignons au beurre puis prolonger avec le reste d'eau de cuisson"],
+    },
+    {
         name: "Galette de fondue de poireaux",
         category: Category.GALETTE,
         ingredients: [
