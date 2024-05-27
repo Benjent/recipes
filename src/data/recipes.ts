@@ -624,6 +624,45 @@ const recipes = [
         steps: ["Pré-cuire les carottes dans une casserole", "Faire revenir l'oignon et les champignons à la poêle", "Ajouter les falafels à la poêle avec les carottes", "Épicer le mélange", "Ajouter la sauce salsa", "Chauffer les galettes au micro-ondes", "Disposer le mélange dans la galette et la rouler"],
     },
     {
+        name: "Wrap de crudités",
+        category: Category.WRAP,
+        ingredients: [
+            {
+                name: "Falafel",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Champignon",
+                amount: 6,
+                unit: "p",
+            },
+            {
+                name: "Chou rouge",
+                amount: 100,
+                unit: "g",
+            },
+            {
+                name: "Carotte",
+                amount: 1,
+                unit: "p",
+            },
+            {
+                name: "Sauche blanche",
+                amount: 100,
+                unit: "g",
+            },
+            {
+                name: "Galette de blé",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: Rapidity.MEDIUM,
+        preparation: ["Préparer le chou, les carottes et les râper", "Émietter les falafels", "Préparer les champignons et les trancher"],
+        steps: ["Poêler les falafels et les champignons", "Répandre la sauce blanche sur la galette", "Disposer les ingrédients dans la galette et la rouler"],
+    },
+    {
         name: "Spaghetti coco",
         category: Category.PASTA,
         ingredients: [
