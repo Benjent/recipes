@@ -2,7 +2,8 @@ import { Category, Rapidity } from "../types"
 
 const recipes = [
     // TODO ajouter recettes below
-    // Désserts - banane flambée
+    // Désserts - banane flambée + gâteau à la banane
+    // Pain perdu
     // Omelette au champignon
     // Taboulé : 200g de semoule fine (cuire semoule avant...), équivalent d'eau bouillante (bouilloire), verser dans un plat avec raisins secs et tomates cerises, attendre 10 minute couvercle)
     // Penne bolo lentlle
@@ -794,6 +795,40 @@ const recipes = [
         steps: ["Cuire les lentilles", "Mélanger la salade, la feta, les radis et les myrtilles avec les lentilles"],
     },
     {
+        name: "Salade de lentilles noires",
+        category: Category.SALAD,
+        ingredients: [
+            {
+                name: "Lentilles noires",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Feta",
+                amount: 250,
+                unit: "g",
+            },
+            {
+                name: "Carottes",
+                amount: 2,
+                unit: "p",
+            },
+            {
+                name: "Oignon rouge",
+                amount: 2,
+                unit: "p",
+            },
+            {
+                name: "Roquette",
+                amount: 1,
+                unit: "p",
+            },
+        ],
+        rapidity: Rapidity.MEDIUM,
+        preparation: ["Laver la salade et les carottes", "Trancher les oignons et la feta", "Râper les carottes"],
+        steps: ["Cuire les lentilles", "Mélanger la salade, la feta, les carottes et les oignons avec les lentilles"],
+    },
+    {
         name: "Pizza aux champignons base crème",
         category: Category.PIZZA,
         ingredients: [
@@ -880,7 +915,7 @@ const recipes = [
         category: Category.MASH,
         ingredients: [
             {
-                name: "Pommes de terre",
+                name: "Pomme de terre",
                 amount: 6,
                 unit: "p",
             },
